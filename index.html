@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #e4eaf0;
+}
+.myname {
+    text-align: center;
+    margin-top: 20px;
+    
+}
+.myname h1 {
+    color: #E4EAF0;
+    font-size: 180px;
+    filter:drop-shadow(5px 8px 7px #cbd9e5) ;
+    letter-spacing:-10px;
+   
+}
+.myname p {
+    color: #fff;
+    font-size: 16px;
+    margin-top: -30px;
+}
+
+.all {
+    width: 100%;
+    height: 100%;
+    text-align: center;  
+    padding: 50px 0;
+}
+/*-------------------------------------卡片布局*/
+.z{
+    width: 290px;
+    height:420px;
+    border-radius: 12px;
+    display: inline-block;
+    margin: 5px 20px;
+    position: relative;
+    cursor: pointer;
+    transform: -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+/*-------------------------------------卡片背景色*/
+
+.one{
+    background: #FAFAF5;
+}
+.two{
+    background: #EFF9FA;
+}
+.three{
+    background: #F4F6FB;
+}
+.z:hover {
+    background: rgba(255, 255, 255, 0);
+}
+/*-------------------------------------绘制圆形*/
+.circle {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    margin-top: -115px;
+    margin-left: -105px;
+    filter:alpha(opacity=60);  
+      -moz-opacity:0.6;  
+      -khtml-opacity: 0.6;  
+      opacity: 0.6; 
+ 
+}
+@keyframes spin {
+  to {transform:rotate(1turn);}
+}
+.circle:hover{
+    
+    animation: spin 3s infinite linear;
+    transform-origin: 90px 80px;
+}
+/*-------------------------------------绘制圆形投影*/
+.z span {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    top:130px;
+    left: 100px;
+    z-index:1;
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+    filter:alpha(opacity=40);  
+      -moz-opacity:0.4;  
+      -khtml-opacity: 0.4;  
+      opacity: 0.4; 
+}
+/*-------------------------------------填充圆形渐变色*/
+.circle_one {
+    background-image: -webkit-gradient(linear, 120deg, from(#F3FF8E), to(#48c846));
+    background-image: -webkit-linear-gradient(120deg, #F3FF8E, #48c846);
+    background-image: -moz-linear-gradient(120deg, #F3FF8E, #48c846);
+    background-image: linear-gradient(120deg, #F3FF8E, #48c846); 
+}
+
+.circle_two {
+    background-image: -webkit-gradient(linear, 120deg, from(#47fec4), to(#2689A7));
+    background-image: -webkit-linear-gradient(120deg, #47fec4, #2689A7);
+    background-image: -moz-linear-gradient(120deg, #47fec4, #2689A7);
+    background-image: linear-gradient(120deg, #47fec4, #2689A7);
+    box-shadow: 0 0 4px 4px #CDF1FD; 
+}
+.circle_three {
+    background-image: -webkit-gradient(linear, 120deg, from(#93eac2), to(#8288cc));
+    background-image: -webkit-linear-gradient(120deg, #93eac2, #8288cc);
+    background-image: -moz-linear-gradient(120deg, #93eac2, #8288cc);
+    background-image: linear-gradient(120deg, #93eac2, #8288cc);
+    box-shadow: 0 0 4px 4px #E7EAF8;
+}
+/*-------------------------------------填充圆形投影渐变色*/
+.z:nth-child(1) span {
+    background-image: -webkit-gradient(linear, 120deg, from(#E9F6C2), to(#9edab0));
+    background-image: -webkit-linear-gradient(120deg, #E9F6C2, #9edab0);
+    background-image: -moz-linear-gradient(120deg, #E9F6C2, #9edab0);
+    background-image: linear-gradient(120deg, #E9F6C2, #9edab0);
+    box-shadow: -2px -2px 30px #94d0a6;  
+}
+.z:nth-child(2) span {
+    background-image: -webkit-gradient(linear, 120deg, from(#BDECE7), to(#96c9d9));
+    background-image: -webkit-linear-gradient(120deg, #BDECE7, #96c9d9);
+    background-image: -moz-linear-gradient(120deg, #BDECE7, #96c9d9);
+    background-image: linear-gradient(120deg, #BDECE7, #96c9d9);
+    box-shadow: -2px -2px 30px #6ABFC8;  
+}
+.z:nth-child(3) span {
+    background-image: -webkit-gradient(linear, 120deg, from(#DDECF0), to(#A3B1DD));
+    background-image: -webkit-linear-gradient(120deg, #DDECF0, #A3B1DD);
+    background-image: -moz-linear-gradient(120deg, #DDECF0, #A3B1DD);
+    background-image: linear-gradient(120deg, #DDECF0, #A3B1DD);
+    box-shadow: -2px -2px 30px 3px #ACC5DB;  
+}
+/*-------------------------------------设置文字位置、字号及颜色*/
+.z h1,.z p {
+    margin-top:330px;
+    
+}
+.z h1 {
+    font-size: 18px;   
+}
+.z p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+.one h1, .one p{
+    color: rgba(94, 105, 55, .6);
+}
+.two h1, .two p{
+    color: rgba(66, 121, 133, .6);
+}
+.three h1, .three p{
+    color: rgba(67, 54, 123, .6);
+}
+    </style>
+</head>
+<body>
+    <div class="myname">
+        <h1>GitHub</h1>
+        <p>Hello, my name is Buzzlightyear. Nice to meet you here!</p>
+        <span></span>
+    </div>
+    <div class="all">
+    <div class="z one">
+        <div class="circle circle_one"></div>
+        <span></span>
+        <h1>文章</h1>
+        <p>学习体会</p>
+    </div>
+    <div class="z two">
+       
+        <div class="circle circle_two"></div>
+        <span></span>
+        <h1>CSS</h1>
+        <p>CSS3-日常练习</p>
+    </div>
+    <div class="z three">
+        <div class="circle circle_three"></div>
+        <span></span>
+        <h1>JS</h1>
+        <p>JS-日常练习</p>
+    </div>
+    <div>
+</body>
