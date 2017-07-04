@@ -46,9 +46,9 @@ body {
     margin: 5px 20px;
     position: relative;
     cursor: pointer;
-    transform: -webkit-transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
+    -webkit-transition: all .7s ease-in-out;
+    -moz-transition: all .7s ease-in-out;
+    transition: all .7s ease-in-out;
 }
 /*-------------------------------------卡片背景色*/
 
@@ -74,10 +74,11 @@ body {
     left: 50%; 
     margin-top: -115px;
     margin-left: -105px;
-    filter:alpha(opacity=60);  
-      -moz-opacity:0.6;  
-      -khtml-opacity: 0.6;  
-      opacity: 0.6; 
+    z-index:1;
+    filter:alpha(opacity=30);  
+      -moz-opacity:0.3;  
+      -khtml-opacity: 0.3;  
+      opacity: 0.3; 
  
 }
 @keyframes spin {
@@ -96,7 +97,6 @@ body {
     position: absolute;
     top:130px;
     left: 100px;
-    z-index:1;
     -webkit-filter: blur(2px);
     filter: blur(2px);
     filter:alpha(opacity=40);  
