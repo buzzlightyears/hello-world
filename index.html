@@ -23,7 +23,6 @@ body {
     font-size: 180px;
     filter:drop-shadow(5px 8px 7px #cbd9e5) ;
     letter-spacing:-10px;
-   
 }
 .myname p {
     color: #fff;
@@ -99,10 +98,10 @@ body {
     left: 100px;
     -webkit-filter: blur(2px);
     filter: blur(2px);
-    filter:alpha(opacity=40);  
-      -moz-opacity:0.4;  
-      -khtml-opacity: 0.4;  
-      opacity: 0.4; 
+    filter:alpha(opacity=40);   /* IE */
+      -moz-opacity:0.4;   /* 老版Mozilla */
+      -khtml-opacity: 0.4;  /* 老版Safari */
+      opacity: 0.4;  /* 支持opacity的浏览器*/
 }
 /*-------------------------------------填充圆形渐变色*/
 .circle_one {
