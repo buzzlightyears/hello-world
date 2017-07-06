@@ -21,13 +21,13 @@ body {
 .myname h1 {
     color: #E4EAF0;
     font-size: 180px;
-    filter:drop-shadow(5px 8px 7px #cbd9e5) ;
-    letter-spacing:-10px;
+    filter:drop-shadow(5px 8px 7px #cbd9e5);
 }
 .myname p {
     color: #fff;
     font-size: 16px;
     margin-top: -30px;
+    padding: 10px 50px;
 }
 
 .all {
@@ -167,6 +167,21 @@ body {
 }
 .three h1, .three p{
     color: rgba(67, 54, 123, .6);
+}
+@media only screen and (min-width:1001px) {
+    .myname h1 {
+    font-size: 180px;
+    filter:drop-shadow(5px 8px 7px #cbd9e5);}
+}
+@media only screen and (max-width: 1000px) and (min-width: 600px) {
+    .myname h1 {
+    font-size: 140px;
+    filter:drop-shadow(4px 6px 5px #cbd9e5);}
+}
+@media only screen and (max-width:600px) {
+    .myname h1 {
+    font-size: 90px;
+    filter:drop-shadow(3px 5px 4px #cbd9e5);}
 }
     </style>
 </head>
