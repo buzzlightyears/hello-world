@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    * {
+        margin:0;
+        padding: 0;
+    }
+/* --------------------------------------------------------------菜单栏-*/
+    header {
+        height: 4.5em;
+        background: #15191A;
+        position: relative;
+    }
+/* ----------------------------------------------定位菜单图标-*/
+
+    .lines {
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        margin-top: -11px;
+        cursor: pointer;
+
+    }
+/* ---------------------------------统一设置三条细线的样式和动画-*/
+
+    .lines span{
+        display: block;
+        width: 25px;
+        height:2px;
+        background: #fff;
+        margin: 4px 0;
+        
+    }
+    .button span{
+        -webkit-animation: all 1s ease-in-out 1;
+        animation: all 1s ease-in-out 1;
+    }
+/* ------------------------------------调用每一条细线的动画名称-*/
+
+    .button:hover span:nth-child(1) {
+        -webkit-animation-name: top;
+        animation-name: top;
+    }
+    .button:hover span:nth-child(2) {
+        -webkit-animation-name: mid;
+        animation-name: mid;
+    }
+    .button:hover span:nth-child(3) {
+        -webkit-animation-name: bot;
+        animation-name: bot;
+    }
+/* ------------------------------------------------设置关键帧-*/
+
+    @-webkit-keyframes top {             /*------------上移--*/
+        0% { transform: translate(0,0)}
+        50% { transform: translate(0,-10px)}
+        60% { transform: translate(0,-10px)}
+        100% { transform: translate(0,0)}
+    }
+    @keyframes top{
+        0% { transform: translate(0,0)}
+        50% { transform: translate(0,-10px)}
+        60% { transform: translate(0,-10px)}
+        100% { transform: translate(0,0)}
+    }
+
+    @-webkit-keyframes mid {               /*-----------旋转--*/
+        0% { transform: rotate(0deg)}
+        100% { transform: rotate(180deg)}
+    }
+    @keyframes mid {                               
+        0% { transform: rotate(0deg)}
+        100% { transform: rotate(180deg)}
+    }
+
+    @-webkit-keyframes bot {           /*-----------下移--*/
+        0% { transform: translate(0,0)}
+        50% { transform: translate(0,10px)}
+        60% { transform: translate(0,10px)}
+        100% { transform: translate(0,0)}
+    }
+    @keyframes bot {                
+        0% { transform: translate(0,0)}
+        50% { transform: translate(0,10px)}
+        60% { transform: translate(0,10px)}
+        100% { transform: translate(0,0)}
+    }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="button">
+            <div class="lines">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+    <main>
+    </main>
+    <footer>
+    </footer>
+</body>
+
+</html>
