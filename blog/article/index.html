@@ -1,41 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        h1,p,span,a,img {
+        h1,h2,h3,
+        p,
+        span,
+        a,
+        img {
             margin: 0;
             padding: 0;
         }
-    .all {
-        width: 50%;
-        height: auto;
-        margin: 2em auto;
-    }
-    main img {
-        width: 30em;
-        height: auto;
-        margin-top: 2em;
-        margin-bottom: 2em;
-    }
-    header span {
-        color: #C0C1C2;
-        font-size: .9em;
-    }
+
+        .all {
+            width: 50%;
+            height: auto;
+            margin: 2em auto;
+        }
+
+        main img {
+            width: 30em;
+            height: auto;
+            margin-top: 2em;
+            margin-bottom: 2em;   
+        }
+
+        header span {
+            color: #C0C1C2;
+            font-size: .9em;
+        }
+        main .html-1 {
+            background: #F1F9FB;
+            padding: 1em 1.5em;
+            margin: 1em 0;
+        }
     </style>
 </head>
+
 <body>
     <div class="all">
-    <header>
-    <h1>CSS3实现动态进度条</h1>
-    <span class="name">2017年4月6日 10：20 &nbsp; by 巴斯光年</span>
-    <header>
-    <main>
-      <img src="one.png"/>
-    </main>
+        <header>
+            <h1>CSS3实现动态进度条</h1>
+            <span class="name">2017年4月6日 10：20 &nbsp; by 巴斯光年</span>
+        </header>
+        <main>
+            <img src="one.png" />
+            <p>首先分析一下这个进度条的结构：分别是标题、背景槽、颜色条。</p>
+            <h2>html结构：</h2>
+            <div class="html-1">
+                <pre>
+&lt;ul id="skill"&gt;
+    &lt;li&gt;&lt;span class="bar bar-1"&gt;&lt;/span&gt;&lt;h3&gt;Graphic Design&lt;/h3&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span class="bar bar-2"&gt;&lt;/span&gt;&lt;h3&gt;html//css&lt;/h3&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span class="bar bar-3"&gt;&lt;/span&gt;&lt;h3&gt;jQuery // MoTools&lt;/h3&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span class="bar bar-4"&gt;&lt;/span&gt;&lt;h3&gt;Wordpress&lt;/h3&gt;&lt;/li&gt;
+&lt;/ul&gt;
+                 </pre>
+            </div>
+            <p>设置页面的背景色：<code>body {background: #E9E5E2;} </code></p>
+        </main>
     </div>
 </body>
+
 </html>
