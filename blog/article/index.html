@@ -30,6 +30,7 @@
             font-size: .9em;
         }
         main .html-1 {
+            width: 100%;
             background: #F1F9FB;
             padding: 1em 1.5em;
             margin: 1em 0;
@@ -57,7 +58,46 @@
 &lt;/ul&gt;
                  </pre>
             </div>
-            <p>设置页面的背景色：<code>body {background: #E9E5E2;} </code></p>
+            <p>设置页面的背景色：<code>body {background: #E9E5E2;} </code>它的初始样式是这样的：</p>
+            <img src="two.png"/>
+            <p>接下来为它添加样式：</p>
+            <div class="html-1">
+            <pre>
+#skill {
+    list-style: none;
+    font-size: .8em;
+    width: 24em;
+    margin: 0 auto;
+    padding:2em 0;
+    position: relative;
+    line-height: 2em;
+}
+#skill li {
+    margin-bottom: 3.2em;
+    background: #e9e5e2;
+
+    /*--背景槽渐变色--*/
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#e1ddd9), to(#e9e5e2));   
+    background-image: -webkit-linear-gradient(top,#e1ddd9,#e9e5e2);
+    background-image: -moz-linear-gradient(top,#e1ddd9,#e9e5e2);
+    background-image: -ms-linear-gradient(top,#e1ddd9,#e9e5e2);
+    background-image: -o-linear-gradient(top,#e1ddd9,#e9e5e2);
+    background-image: linear-gradient(top,#e1ddd9,#e9e5e2);
+
+    height: 1.3em;
+    border-radius: 10px;    /*--背景槽的圆角--*/
+
+   /*--背景槽内凹阴影效果--*/
+    -webkit-box-shadow: 0 1px 0 #bebbb9 inset, 0 1px 0 #fcfcfc;
+    box-shadow: 0 1px 0 #bebbb9 inset, 0 1px 0 #fcfcfc;
+}
+   ／*--标题文字上移--*／
+#skill li h3 {
+    position: relative;
+    top: -1.5em;
+}   
+            </pre>
+            </div>
         </main>
     </div>
 </body>
