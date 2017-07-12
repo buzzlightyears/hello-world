@@ -7,7 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        h1,h2,h3,p,span,a{
+        h1,
+        h2,
+        h3,
+        p,
+        span,
+        a {
             margin: 0;
             padding: 0;
         }
@@ -22,18 +27,28 @@
             width: 30em;
             height: auto;
             margin-top: 2em;
-            margin-bottom: 2em;   
+            margin-bottom: 2em;
         }
 
         header span {
             color: #C0C1C2;
             font-size: .9em;
         }
+
         main .html-1 {
-            width: 100%;
-            background: #F1F9FB;
+            width: auto;
+            background: #F6F6F6;
             padding: 1em 1.5em;
             margin: 1em 0;
+            
+        }
+        main .html-1 pre {
+            width: auto;
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word
         }
     </style>
 </head>
@@ -59,10 +74,10 @@
                  </pre>
             </div>
             <p>设置页面的背景色：<code>body {background: #E9E5E2;} </code>它的初始样式是这样的：</p>
-            <img src="two.png"/>
+            <img src="two.png" />
             <p>接下来为它添加样式：</p>
             <div class="html-1">
-            <pre>
+                <pre>
 #skill {
     list-style: none;
     font-size: .8em;
