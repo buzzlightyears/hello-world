@@ -16,14 +16,16 @@
             margin: 0;
             padding: 0;
         }
-        /*--------------------------------*/
-
+        /*------------------------------页面中实现效果--*/
+.show {
+    background: #F1F9FB;   
+}
 #skill {
     list-style: none;
     font-size: 12px;
     width: 296px;
-    margin: 50px auto 0;
-    padding: 30px 0;
+    margin: 40px auto 20px;
+    padding: 50px 0;
     position: relative;
     line-height: 2em;
 }
@@ -43,6 +45,9 @@
     -webkit-box-shadow: 0 1px 0 #bebbb9 inset, 0 1px 0 #fcfcfc;
     box-shadow: 0 1px 0 #bebbb9 inset, 0 1px 0 #fcfcfc;
 }
+#skill li:nth-last-child(1) {
+    margin-bottom: 0;
+}
 #skill li h3 {
     position: relative;
     top: -25px;
@@ -57,7 +62,8 @@
 }
 .bar-1 {
     width: 100%;
-    -webkit-animation: graphic-design 2s ease-in-out;
+    -webkit-animation: graphic-design 2s ease-in-out infinite;
+    animation: graphic-design 2s ease-in-out infinite;
     background-color: #f674a4;
     background-image: -webkit-gradient( linear, left top, left bottom, from(#f674a4), to(#e06995));
     background-image: -webkit-linear-gradient(top, #f674a4, #e06995);
@@ -68,7 +74,8 @@
 }
 .bar-2 {
      width: 90%;
-    -webkit-animation: html-css 2s ease-in-out;
+    -webkit-animation: html-css 2s ease-in-out infinite;
+    animation: html-css 2s ease-in-out infinite;
     background-color: #0674a4;
     background-image: -webkit-gradient( linear, left top, left bottom, from(#f674a4), to(#e06995));
     background-image: -webkit-linear-gradient(top, #0674a4, #006995);
@@ -79,7 +86,8 @@
 }
 .bar-3 {
      width: 65%;
-    -webkit-animation: jQuery 2s ease-in-out;
+    -webkit-animation: jQuery 2s ease-in-out infinite;
+    animation: jQuery 2s ease-in-out infinite;
     background-color: #06f4a4;
     background-image: -webkit-gradient( linear, left top, left bottom, from(#f674a4), to(#e06995));
     background-image: -webkit-linear-gradient(top, #06f4a4, #00f995);
@@ -90,7 +98,8 @@
 }
 .bar-4 {
      width: 80%;
-    -webkit-animation: Wordpress 2s ease-in-out;
+    -webkit-animation: Wordpress 2s ease-in-out infinite;
+    animation: Wordpress 2s ease-in-out infinite;
     background-color: #06f4ff;
     background-image: -webkit-gradient( linear, left top, left bottom, from(#f674a4), to(#e06995));
     background-image: -webkit-linear-gradient(top, #06f4ff, #00f9ff);
@@ -103,7 +112,15 @@
     0% {width:0;}
     100%{width:100%;}
 }
+@keyframes graphic-design {
+    0% {width:0;}
+    100%{width:100%;}
+}
 @-webkit-keyframes html-css {
+    0% {width:0;}
+    100%{width:90%;}
+}
+@keyframes html-css {
     0% {width:0;}
     100%{width:90%;}
 }
@@ -111,12 +128,20 @@
     0% {width:0;}
     100%{width:65%;}
 }
+@keyframes jQuery {
+    0% {width:0;}
+    100%{width:65%;}
+}
 @-webkit-keyframes Wordpress {
     0% {width:0;}
     100%{width:80%;}
 }
+@keyframes Wordpress {
+    0% {width:0;}
+    100%{width:80%;}
+}
                    
-        /*--------------------------------*/
+/*------------------------------页面中实现效果--*/
 
         .all {
             width: 50%;
@@ -161,13 +186,12 @@
             <span class="name">2017年4月6日 10：20 &nbsp; by 巴斯光年</span>
         </header>
         <main>
-            <img src="one.png" />
             <div class="show">
                  <ul id="skill">
-        <li><span class="bar graphic-design"></span><h3>Graphic Design</h3></li>
-        <li><span class="bar html-css"></span><h3>html//css</h3></li>
-        <li><span class="bar jQuery"></span><h3>jQuery // MoTools</h3></li>
-        <li><span class="bar Wordpress"></span><h3>Wordpress</h3></li>
+        <li><span class="bar bar-1"></span><h3>Graphic Design</h3></li>
+        <li><span class="bar bar-2"></span><h3>html//css</h3></li>
+        <li><span class="bar bar-3"></span><h3>jQuery // MoTools</h3></li>
+        <li><span class="bar bar-4"></span><h3>Wordpress</h3></li>
     </ul>
             </div>
             <p>首先分析一下这个进度条的结构：分别是标题、背景槽、颜色条。</p>
@@ -182,7 +206,7 @@
 &lt;/ul&gt;
                  </pre>
             </div>
-            <p>设置页面的背景色：<code>body {background: #E9E5E2;} </code>它的初始样式是这样的：</p>
+            <p>设置页面的背景色：<code>{background: #E9E5E2;} </code>它的初始样式是这样的：</p>
             <img src="two.png" />
             <p>接下来为它添加样式：</p>
             <div class="html-1">
@@ -191,8 +215,8 @@
     list-style: none;
     font-size: 12px;
     width: 296px;
-    margin: 50px auto 0;
-    padding: 30px 0;
+    margin: 40px auto 20;
+    padding: 50px 0;
     position: relative;
     line-height: 2em;
 }
@@ -211,6 +235,9 @@
 
     -webkit-box-shadow: 0 1px 0 #bebbb9 inset, 0 1px 0 #fcfcfc;
     box-shadow: 0 1px 0 #bebbb9 inset, 0 1px 0 #fcfcfc;
+}
+#skill li:nth-last-child(1) {
+    margin-bottom: 0;
 }
 #skill li h3 {
     position: relative;
@@ -235,7 +262,8 @@
 /*--单独设置进度条的样式--*/
 .bar-1 {
     width: 100%;
-    -webkit-animation: graphic-design 2s ease-in-out;
+    -webkit-animation: graphic-design 2s ease-in-out infinite;
+    animation: graphic-design 2s ease-in-out infinite;
     background-color: #f674a4;
     background-image: -webkit-gradient( linear, left top, left bottom, from(#f674a4), to(#e06995));
     background-image: -webkit-linear-gradient(top, #f674a4, #e06995);
@@ -246,7 +274,8 @@
 }
 .bar-2 {
      width: 90%;
-    -webkit-animation: html-css 2s ease-in-out;
+    -webkit-animation: html-css 2s ease-in-out infinite;
+    animation: html-css 2s ease-in-out infinite;
     background-color: #0674a4;
     background-image: -webkit-gradient( linear, left top, left bottom, from(#f674a4), to(#e06995));
     background-image: -webkit-linear-gradient(top, #0674a4, #006995);
@@ -257,7 +286,8 @@
 }
 .bar-3 {
      width: 65%;
-    -webkit-animation: jQuery 2s ease-in-out;
+    -webkit-animation: jQuery 2s ease-in-out infinite;
+    animation: jQuery 2s ease-in-out infinite;
     background-color: #06f4a4;
     background-image: -webkit-gradient( linear, left top, left bottom, from(#f674a4), to(#e06995));
     background-image: -webkit-linear-gradient(top, #06f4a4, #00f995);
@@ -268,7 +298,8 @@
 }
 .bar-4 {
      width: 80%;
-    -webkit-animation: Wordpress 2s ease-in-out;
+    -webkit-animation: Wordpress 2s ease-in-out infinite;
+    animation: Wordpress 2s ease-in-out infinite;
     background-color: #06f4ff;
     background-image: -webkit-gradient( linear, left top, left bottom, from(#f674a4), to(#e06995));
     background-image: -webkit-linear-gradient(top, #06f4ff, #00f9ff);
@@ -282,7 +313,16 @@
     0% {width:0;}
     100%{width:100%;}
 }
+@
+keyframes graphic-design {
+    0% {width:0;}
+    100%{width:100%;}
+}
 @-webkit-keyframes html-css {
+    0% {width:0;}
+    100%{width:90%;}
+}
+@keyframes html-css {
     0% {width:0;}
     100%{width:90%;}
 }
@@ -290,7 +330,15 @@
     0% {width:0;}
     100%{width:65%;}
 }
+@keyframes jQuery {
+    0% {width:0;}
+    100%{width:65%;}
+}
 @-webkit-keyframes Wordpress {
+    0% {width:0;}
+    100%{width:80%;}
+}  
+@keyframes Wordpress {
     0% {width:0;}
     100%{width:80%;}
 }    
