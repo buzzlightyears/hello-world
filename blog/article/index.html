@@ -17,7 +17,8 @@
             padding: 0;
         }
         /*--------------------------------*/
-        #skill {
+
+#skill {
     list-style: none;
     font-size: 12px;
     width: 296px;
@@ -37,23 +38,15 @@
     background-image: linear-gradient(top,#e1ddd9,#e9e5e2);
 
     height: 20px;
-    border-radius: 10px;  /*--背景槽的圆角--*/
+    border-radius: 10px;
 
     -webkit-box-shadow: 0 1px 0 #bebbb9 inset, 0 1px 0 #fcfcfc;
     box-shadow: 0 1px 0 #bebbb9 inset, 0 1px 0 #fcfcfc;
 }
 #skill li h3 {
     position: relative;
-    top: -25px;   ／*--标题文字上移--*／
-}  
-                </pre>
-            </div>
-            <p>加完这些样式之后，标题和背景槽的样式都设置好了</p>
-            <img src="three.png" />
-            <p>接下来就可以设置颜色条的样式了：</p>
-            <div class="html-1">
-                <pre>
-/*--四条进度条的统一样式--*/
+    top: -25px;
+}
 .bar {
     height: 18px;
     margin: 1px 2px;
@@ -62,7 +55,6 @@
     -webkit-box-shadow:0 1px 0 #fcfcfc inset, 0 1px 0 #bebbb9;
     box-shadow:0 1px 0 #fcfcfc inset, 0 1px 0 #bebbb9;
 }
-/*--单独设置进度条的样式--*/
 .bar-1 {
     width: 100%;
     -webkit-animation: graphic-design 2s ease-in-out;
@@ -107,7 +99,6 @@
     background-image: -o-linear-gradient(top, #06f4ff, #00f9ff);
     background-image: linear-gradient(top, #06f4ff, #00f9ff);
 }
-/*--设置每条进度条的关键帧动画--*/
 @-webkit-keyframes graphic-design {
     0% {width:0;}
     100%{width:100%;}
@@ -123,7 +114,8 @@
 @-webkit-keyframes Wordpress {
     0% {width:0;}
     100%{width:80%;}
-}    
+}
+                   
         /*--------------------------------*/
 
         .all {
