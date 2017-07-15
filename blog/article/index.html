@@ -16,6 +16,115 @@
             margin: 0;
             padding: 0;
         }
+        /*--------------------------------*/
+        #skill {
+    list-style: none;
+    font-size: 12px;
+    width: 296px;
+    margin: 50px auto 0;
+    padding: 30px 0;
+    position: relative;
+    line-height: 2em;
+}
+#skill li {
+    margin-bottom: 50px;
+    background: #e9e5e2;
+
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#e1ddd9), to(#e9e5e2));
+    background-image: -moz-linear-gradient(top,#e1ddd9,#e9e5e2);
+    background-image: -ms-linear-gradient(top,#e1ddd9,#e9e5e2);
+    background-image: -o-linear-gradient(top,#e1ddd9,#e9e5e2);
+    background-image: linear-gradient(top,#e1ddd9,#e9e5e2);
+
+    height: 20px;
+    border-radius: 10px;  /*--背景槽的圆角--*/
+
+    -webkit-box-shadow: 0 1px 0 #bebbb9 inset, 0 1px 0 #fcfcfc;
+    box-shadow: 0 1px 0 #bebbb9 inset, 0 1px 0 #fcfcfc;
+}
+#skill li h3 {
+    position: relative;
+    top: -25px;   ／*--标题文字上移--*／
+}  
+                </pre>
+            </div>
+            <p>加完这些样式之后，标题和背景槽的样式都设置好了</p>
+            <img src="three.png" />
+            <p>接下来就可以设置颜色条的样式了：</p>
+            <div class="html-1">
+                <pre>
+/*--四条进度条的统一样式--*/
+.bar {
+    height: 18px;
+    margin: 1px 2px;
+    position: absolute;
+    border-radius: 9px;
+    -webkit-box-shadow:0 1px 0 #fcfcfc inset, 0 1px 0 #bebbb9;
+    box-shadow:0 1px 0 #fcfcfc inset, 0 1px 0 #bebbb9;
+}
+/*--单独设置进度条的样式--*/
+.bar-1 {
+    width: 100%;
+    -webkit-animation: graphic-design 2s ease-in-out;
+    background-color: #f674a4;
+    background-image: -webkit-gradient( linear, left top, left bottom, from(#f674a4), to(#e06995));
+    background-image: -webkit-linear-gradient(top, #f674a4, #e06995);
+    background-image: -moz-linear-gradient(top, #f674a4, #e06995);
+    background-image: -ms-linear-gradient(top, #f674a4, #e06995);
+    background-image: -o-linear-gradient(top, #f674a4, #e06995);
+    background-image: linear-gradient(top, #f674a4, #e06995);
+}
+.bar-2 {
+     width: 90%;
+    -webkit-animation: html-css 2s ease-in-out;
+    background-color: #0674a4;
+    background-image: -webkit-gradient( linear, left top, left bottom, from(#f674a4), to(#e06995));
+    background-image: -webkit-linear-gradient(top, #0674a4, #006995);
+    background-image: -moz-linear-gradient(top, #0674a4, #006995);
+    background-image: -ms-linear-gradient(top, #0674a4, #006995);
+    background-image: -o-linear-gradient(top, #0674a4, #006995);
+    background-image: linear-gradient(top, #0674a4, #006995);
+}
+.bar-3 {
+     width: 65%;
+    -webkit-animation: jQuery 2s ease-in-out;
+    background-color: #06f4a4;
+    background-image: -webkit-gradient( linear, left top, left bottom, from(#f674a4), to(#e06995));
+    background-image: -webkit-linear-gradient(top, #06f4a4, #00f995);
+    background-image: -moz-linear-gradient(top, #06f4a4, #00f995);
+    background-image: -ms-linear-gradient(top, #06f4a4, #00f995);
+    background-image: -o-linear-gradient(top, #06f4a4, #00f995);
+    background-image: linear-gradient(top, #06f4a4, #00f995);
+}
+.bar-4 {
+     width: 80%;
+    -webkit-animation: Wordpress 2s ease-in-out;
+    background-color: #06f4ff;
+    background-image: -webkit-gradient( linear, left top, left bottom, from(#f674a4), to(#e06995));
+    background-image: -webkit-linear-gradient(top, #06f4ff, #00f9ff);
+    background-image: -moz-linear-gradient(top, #06f4ff, #00f9ff);
+    background-image: -ms-linear-gradient(top, #06f4ff, #00f9ff);
+    background-image: -o-linear-gradient(top, #06f4ff, #00f9ff);
+    background-image: linear-gradient(top, #06f4ff, #00f9ff);
+}
+/*--设置每条进度条的关键帧动画--*/
+@-webkit-keyframes graphic-design {
+    0% {width:0;}
+    100%{width:100%;}
+}
+@-webkit-keyframes html-css {
+    0% {width:0;}
+    100%{width:90%;}
+}
+@-webkit-keyframes jQuery {
+    0% {width:0;}
+    100%{width:65%;}
+}
+@-webkit-keyframes Wordpress {
+    0% {width:0;}
+    100%{width:80%;}
+}    
+        /*--------------------------------*/
 
         .all {
             width: 50%;
