@@ -1,0 +1,18 @@
+body {
+    background-color: #ace;
+}
+.wripper {
+    width: 700px;
+    margin: 0 auto;
+}
+.row {
+    text-align: center;
+    padding: 50px 0;
+}
+.span {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(0, 0, 0, .02);
+    vertical-align: middle;
+
+}
