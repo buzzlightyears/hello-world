@@ -10,9 +10,10 @@ body {
     padding: 50px 0;
 }
 .span {
+    float:left;
     width: 100px;
     height: 100px;
     background-color: rgba(0, 0, 0, .02);
     vertical-align: middle;
-
+    margin-left: 100px;
 }
