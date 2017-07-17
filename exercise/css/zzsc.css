@@ -1,9 +1,17 @@
-body {
-    background-color: #15191A;
+*  {
+    margin: 0;
+    padding: 0;
 }
-.wripper {
-    width: 700px;
+body {
+    background: #E4EAF0;
+    position: relative;
+}
+main {
+    width: 70%;
+    height: 500px;
+    background: #ace;
     margin: 0 auto;
+    margin-top: 100px;
 }
 .row {
     text-align: center;
