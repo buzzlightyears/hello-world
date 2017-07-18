@@ -2,26 +2,44 @@
     margin: 0;
     padding: 0;
 }
-body {
-    background: #E4EAF0;
-    position: relative;
+li {
+    list-style: none;
 }
-main {
-    width: 70%;
-    height: 500px;
-    background: #ace;
+header {
+    width: 100%;
+    background-color: #15191A;
     margin: 0 auto;
-    margin-top: 100px;
+    height: 4.5em;
+}
+.wrapper {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
 }
 .row {
-    text-align: center;
-    padding: 50px 0;
+    float:left;
+    width: 300px;
+    height: 250px;
+    background-color: rgba(0, 0, 0, .1);
+    vertical-align: middle;
+    margin: 0 auto;
+    margin-right: 2em;
+    margin-top: 2em;   
+}
+.wrapper ul > li {
+    border-radius: 12px;
+}
+.wrapper ul > li {
+    background: #EFF9FA;
+}
+.wrapper ul > li:nth-child(2n+1) {
+    background: #F4F6FB;
+}
+
+.row:last-child{
+    margin-right: 0;
 }
 .span {
-    float:left;
-    width: 100px;
-    height: 100px;
-    background-color: rgba(0, 0, 0, .02);
-    vertical-align: middle;
-    margin-left: 100px;
+    
+    
 }
