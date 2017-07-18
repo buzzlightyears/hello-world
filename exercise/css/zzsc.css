@@ -5,24 +5,23 @@
 li {
     list-style: none;
 }
+
 header {
     width: 100%;
     background-color: #15191A;
     margin: 0 auto;
     height: 4.5em;
 }
-.wrapper {
+main {
     width: 80%;
     height: 100%;
     margin: 0 auto;
+    background-color: #fce;
 }
-.row {
+.wrapper ul > li {
     float:left;
     width: 300px;
     height: 250px;
-    background-color: rgba(0, 0, 0, .1);
-    vertical-align: middle;
-    margin: 0 auto;
     margin-right: 2em;
     margin-top: 2em;   
 }
@@ -36,7 +35,7 @@ header {
     background: #F4F6FB;
 }
 
-.row:last-child{
+.wrapper ul > li:last-child{
     margin-right: 0;
 }
 .span {
