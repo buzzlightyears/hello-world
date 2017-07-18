@@ -12,17 +12,18 @@ header {
     margin: 0 auto;
     height: 4.5em;
 }
-main {
-    width: 80%;
-    height: 100%;
-    margin: 0 auto;
-    background-color: #fce;
+.wrapper {
+  width: 1000px;
+  height: 700px;
+  background: #fce;
+  margin: 0 auto;
 }
+
 .wrapper ul > li {
     float:left;
     width: 300px;
     height: 250px;
-    margin-right: 2em;
+    margin-right: 2.3em;
     margin-top: 2em;   
 }
 .wrapper ul > li {
@@ -35,8 +36,9 @@ main {
     background: #F4F6FB;
 }
 
-.wrapper ul > li:last-child{
+.wrapper ul > li:nth-child(3n){
     margin-right: 0;
+    background: #ace;
 }
 .span {
     
