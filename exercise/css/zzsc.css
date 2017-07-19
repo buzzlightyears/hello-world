@@ -124,8 +124,14 @@ header {
     margin-right: 0;
 }
 .wrapper .box .exe-1 {
-    
      background: url(../exercise-1/one.png) no-repeat top center;
      overflow: hidden;
      background-size: auto 250px;
+}
+
+.wrapper .box .exe-1:hover {
+    filter:alpha(opacity=30);  
+      -moz-opacity:0.3;  
+      -khtml-opacity: 0.3;  
+      opacity: 0.3; 
 }
