@@ -102,7 +102,7 @@ header {
   margin: 0 auto;
 }
 .wrapper .box {
-    width: 932px;
+    width: 938px;
     height: auto;
     margin: 0 auto;
 }
@@ -111,13 +111,10 @@ header {
     width: 300px;
     height: 250px;
     margin-right: 1em;
-    margin-top: 2em;   
-}
-.wrapper ul > li {
+    margin-top: 2em; 
     border-radius: 12px;
-}
-.wrapper ul > li {
     background: #EFF9FA;
+    border: 1px solid #ddd;   
 }
 .wrapper ul > li:nth-child(2n+1) {
     background: #F4F6FB;
@@ -126,7 +123,9 @@ header {
 .wrapper ul > li:nth-child(3n){
     margin-right: 0;
 }
-.span {
+.wrapper .box .exe-1 {
     
-    
+     background: url(../exercise-1/one.png) no-repeat top center;
+     overflow: hidden;
+     background-size: auto 250px;
 }
