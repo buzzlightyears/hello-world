@@ -114,7 +114,8 @@ header {
     margin-top: 2em; 
     border-radius: 12px;
     background: #EFF9FA;
-    border: 1px solid #ddd;   
+    border: 1px solid #ddd; 
+    position: relative;  
 }
 .wrapper ul > li:nth-child(2n+1) {
     background: #F4F6FB;
@@ -130,7 +131,12 @@ header {
      overflow: hidden;
      background-size: auto 250px;
 }
-
+.wrapper .box .exe-1 .span {
+    text-align: center;
+    position: absolute;
+    bottom: 60px;
+    z-index: 1;
+}
 .wrapper .box .exe-1 .bg:hover {
     filter:alpha(opacity=30);  
       -moz-opacity:0.3;  
