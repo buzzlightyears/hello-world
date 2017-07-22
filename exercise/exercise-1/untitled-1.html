@@ -5,8 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+    /* ---------------------------------------基础样式 */
+#skill {
+    list-style: none;
+    font-size: 12px;
+    width: 296px;
+    margin: 40px auto 20;
+    padding: 50px 0;
+    position: relative;
+    line-height: 2em;
+}
+#skill li {
+    margin-bottom: 50px;
+    background: #e9e5e2;
+
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#e1ddd9), to(#e9e5e2));
+    background-image: -moz-linear-gradient(top,#e1ddd9,#e9e5e2);
+    background-image: -ms-linear-gradient(top,#e1ddd9,#e9e5e2);
+    background-image: -o-linear-gradient(top,#e1ddd9,#e9e5e2);
+    background-image: linear-gradient(top,#e1ddd9,#e9e5e2);
+
+    height: 20px;
+    border-radius: 10px;  /*--背景槽的圆角--*/
+
+    -webkit-box-shadow: 0 1px 0 #bebbb9 inset, 0 1px 0 #fcfcfc;
+    box-shadow: 0 1px 0 #bebbb9 inset, 0 1px 0 #fcfcfc;
+}
+#skill li:nth-last-child(1) {
+    margin-bottom: 0;
+}
+#skill li h3 {
+    position: relative;
+    top: -25px;   /*--标题文字上移--*/
+}  
+
+    </style>
 </head>
 <body>
-    
+    <ul id="skill">
+    <li><span class="bar bar-1"></span><h3>Graphic Design</h3></li>
+    <li><span class="bar bar-2"></span><h3>html//css</h3></li>
+    <li><span class="bar bar-3"></span><h3>jQuery // MoTools</h3></li>
+    <li><span class="bar bar-4"></span><h3>Wordpress</h3></li>
+</ul>
 </body>
 </html>
