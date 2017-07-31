@@ -97,18 +97,34 @@ li {
 .litle-circle {
     width: 8px;
     height: 8px;
-    background: rgba(37, 40, 46, 1);
+    background-color: rgba(37, 40, 46, 1);
     border-radius: 50%;
     margin: 56px auto;
     position: absolute;
     left: 38px;
-    -webkit-animation: typing 3s linear infinite;
-    -moz-animation: typing 3s linear infinite;
-    animation: typing 3s linear infinite; 
+    -webkit-animation: typing 1s linear infinite alternate;
+    -moz-animation: typing 1s linear infinite alternate;
+    animation: typing 1s linear infinite alternate; 
 }
 @-webkit-keyframes typing {
+    0%{background-color: rgba(37, 40, 46, 1);
+        box-shadow: 16px 0 0 rgba(37, 40, 46, .2),
+                    32px 0 0 rgba(37, 40, 46, .2);}
+    25% {background-color: rgba(37, 40, 46, .2);
+        box-shadow: 16px 0 0 rgba(37, 40, 46, 1),
+                    32px 0 0 rgba(37, 40, 46, .2)}
+    75% {background-color: rgba(37, 40, 46, .2);
+        box-shadow: 16px 0 0 rgba(37, 40, 46, .2),
+                    32px 0 0 rgba(37, 40, 46, 1)}
+}
+@keyframes typing {
     0% {background-color: rgba(37, 40, 46, 1);
-        box-shadow: 18px 0 0 rgba(37, 40, 46, .4),
-        36px 0 0 rgba(37, 40, 46, .4);}
-
+        box-shadow: 16px 0 0 rgba(37, 40, 46, .2),
+                    32px 0 0 rgba(37, 40, 46, .2);}
+    25% {background-color: rgba(37, 40, 46, .2);
+        box-shadow: 16px 0 0 rgba(37, 40, 46, 1),
+                    32px 0 0 rgba(37, 40, 46, .2)}
+    75% {background-color: rgba(37, 40, 46, .2);
+        box-shadow: 16px 0 0 rgba(37, 40, 46, .2),
+                    32px 0 0 rgba(37, 40, 46, 1)}
 }
