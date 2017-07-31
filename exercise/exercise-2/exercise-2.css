@@ -102,4 +102,13 @@ li {
     margin: 56px auto;
     position: absolute;
     left: 38px;
+    -webkit-animation: typing 3s linear infinite;
+    -moz-animation: typing 3s linear infinite;
+    animation: typing 3s linear infinite; 
+}
+@-webkit-keyframes typing {
+    0% {background-color: rgba(37, 40, 46, 1);
+        box-shadow: 18px 0 0 rgba(37, 40, 46, .4),
+        36px 0 0 rgba(37, 40, 46, .4);}
+
 }
