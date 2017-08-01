@@ -163,3 +163,130 @@ li {
     0% {opacity: 0.1; transform: rotate(0deg) scale(1);}
     100% {opacity: 1; transform: rotate(360deg) scale(1.5);}
 }
+/*------------------------------------------------loading-5*/
+.dashboard {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(37, 40, 46, 0);
+    border: 1px solid rgba(37, 40, 46, 1);
+    overflow: hidden;
+    margin: 43px auto;
+    position: relative;
+    z-index: 1;
+}
+.dashboard::before, .dashboard::after {
+    position: absolute;
+    content: "";
+}
+.dashboard::before {
+    width: 32px;
+    height: 20px;
+    background: rgba(37, 40, 46, 1); 
+    top: 20px;
+    left: 0px;
+}
+.dashboard::after {
+    width: 14px;
+    height: 2px;
+    top: 20px;
+    background: rgba(37, 40, 46, 1);
+    -webkit-transform-origin: 1px 1px;
+    -moz-transform-origin: 1px 1px;
+    transform-origin: 1px 1px;
+    -webkit-animation: dashboard-hand 1s linear infinite alternate;
+    -moz-animation: dashboard-hand 1s linear infinite alternate;
+    animation: dashboard-hand 1s linear infinite alternate;
+}
+@-webkit-keyframes dashboard-hand {
+    0% {-webkit-transform: rotate(-160deg);}
+    100% {-webkit-transform: rotate(-20deg);}
+}
+@-moz-keyframes dashboard-hand {
+    0% {-moz-transform: rotate(-160deg);}
+    100% {-moz-transform: rotate(-20deg);}
+}
+@keyframes dashboard-hand {
+    0% {transform: rotate(-160deg);}
+    100% {transform: rotate(-20deg);}
+}
+/*------------------------------------------------loading-6*/
+.cloud {
+    width: 6px;
+    height: 14px;
+    background: rgba(37, 40, 46, 1);
+    margin: 53px 32px;
+    position: relative;
+    box-shadow: 10px 0 0 0 rgba(37, 40, 46, 1),
+                20px 0 0 0 rgba(37, 40, 46, 1),
+                30px 0 0 0 rgba(37, 40, 46, 1),
+                40px 0 0 0 rgba(37, 40, 46, 1),
+                50px 0 0 0 rgba(37, 40, 46, 1);
+    -webkit-animation: rain 2s linear infinite alternate;
+    -moz-animation: rain 2s linear infinite alternate;
+    animation: rain 2s linear infinite alternate;            
+}
+.cloud::after {
+    content: "";
+    width: 56px;
+    height: 14px;
+    background: rgba(37, 40, 46, 1);
+    position: absolute;
+    left: 0px;
+    -webkit-animation: line-flow 2s linear infinite ;
+    -moz-animation: line-flow 2s linear infinite ;
+    animation: line-flow 2s linear infinite ;
+}
+@-webkit-keyframes rain {
+    0%{box-shadow: 10px 0 0 0 rgba(37, 40, 46, .9),
+                   20px 0 0 0 rgba(37, 40, 46, .8),
+                   30px 0 0 0 rgba(37, 40, 46, .6),
+                   40px 0 0 0 rgba(37, 40, 46, .4),
+                   50px 0 0 0 rgba(37, 40, 46, .2);}
+    100%{background: rgba(37, 40, 46, 0);
+         box-shadow: 10px 0 0 0 rgba(37, 40, 46, .2),
+                   20px 0 0 0 rgba(37, 40, 46, .4),
+                   30px 0 0 0 rgba(37, 40, 46, .6),
+                   40px 0 0 0 rgba(37, 40, 46, .8),
+                   50px 0 0 0 rgba(37, 40, 46, 1);}            
+}
+@-moz-keyframes rain {
+    0%{box-shadow: 10px 0 0 0 rgba(37, 40, 46, .9),
+                   20px 0 0 0 rgba(37, 40, 46, .8),
+                   30px 0 0 0 rgba(37, 40, 46, .6),
+                   40px 0 0 0 rgba(37, 40, 46, .4),
+                   50px 0 0 0 rgba(37, 40, 46, .2);}
+    100%{background: rgba(37, 40, 46, 0);
+         box-shadow: 10px 0 0 0 rgba(37, 40, 46, .2),
+                   20px 0 0 0 rgba(37, 40, 46, .4),
+                   30px 0 0 0 rgba(37, 40, 46, .6),
+                   40px 0 0 0 rgba(37, 40, 46, .8),
+                   50px 0 0 0 rgba(37, 40, 46, 1);}            
+}
+@keyframes rain {
+    0%{box-shadow: 10px 0 0 0 rgba(37, 40, 46, .9),
+                   20px 0 0 0 rgba(37, 40, 46, .8),
+                   30px 0 0 0 rgba(37, 40, 46, .6),
+                   40px 0 0 0 rgba(37, 40, 46, .4),
+                   50px 0 0 0 rgba(37, 40, 46, .2);}
+    100%{background: rgba(37, 40, 46, 0);
+         box-shadow: 10px 0 0 0 rgba(37, 40, 46, .2),
+                   20px 0 0 0 rgba(37, 40, 46, .4),
+                   30px 0 0 0 rgba(37, 40, 46, .6),
+                   40px 0 0 0 rgba(37, 40, 46, .8),
+                   50px 0 0 0 rgba(37, 40, 46, 1);}            
+}
+
+@-webkit-keyframes line-flow {
+    0%{width: 56px;}
+    100% {width: 0; }
+}
+@-moz-keyframes line-flow {
+    0%{width: 56px;}
+    100% {width: 0; }
+}
+@keyframes line-flow {
+    0%{width: 56px;}
+    100% {width: 0; }
+}
+/*------------------------------------------------loading-7*/
