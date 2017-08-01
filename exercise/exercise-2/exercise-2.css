@@ -222,9 +222,9 @@ li {
                 30px 0 0 0 rgba(37, 40, 46, 1),
                 40px 0 0 0 rgba(37, 40, 46, 1),
                 50px 0 0 0 rgba(37, 40, 46, 1);
-    -webkit-animation: rain 2s linear infinite alternate;
-    -moz-animation: rain 2s linear infinite alternate;
-    animation: rain 2s linear infinite alternate;            
+    -webkit-animation: rain 3s linear infinite alternate;
+    -moz-animation: rain 3s linear infinite alternate;
+    animation: rain 3s linear infinite alternate;            
 }
 .cloud::after {
     content: "";
@@ -233,9 +233,9 @@ li {
     background: rgba(37, 40, 46, 1);
     position: absolute;
     left: 0px;
-    -webkit-animation: line-flow 2s linear infinite ;
-    -moz-animation: line-flow 2s linear infinite ;
-    animation: line-flow 2s linear infinite ;
+    -webkit-animation: line-flow 3s linear infinite ;
+    -moz-animation: line-flow 3s linear infinite ;
+    animation: line-flow 3s linear infinite ;
 }
 @-webkit-keyframes rain {
     0%{box-shadow: 10px 0 0 0 rgba(37, 40, 46, .9),
