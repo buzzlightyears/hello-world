@@ -17,17 +17,17 @@ li {
 @media only screen and (min-width:1001px) {
     .show-all ul {
     width: 800px;
-   ;}
+   }
 }
 @media only screen and (max-width: 1000px) and (min-width: 600px) {
     .show-all ul {
     width: 600px;
-   ;}
+   }
 }
 @media only screen and (max-width:600px) {
     .show-all ul {
     width: 400px;
-   ;}
+   }
 }
 .show-all ul li {
     float: left;
@@ -35,7 +35,7 @@ li {
     height: 120px;
     border-radius: 0px;
     background: rgba(255, 255, 255, .4);
-    margin: 40px 40px;
+    margin: 40px;
     position: relative;
 }
 

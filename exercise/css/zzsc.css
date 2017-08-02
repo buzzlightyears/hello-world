@@ -6,9 +6,11 @@
 
 /* --------------------------------------------------------------菜单栏-*/
     header {
+        width: 100%;
         height: 4.5em;
         background: #15191A;
         position: relative;
+        
     }
 /* ----------------------------------------------定位菜单图标-*/
 
@@ -90,27 +92,15 @@ li {
     list-style: none;
 }
 
-header {
-    width: 100%;
-    background-color: #15191A;
-    margin: 0 auto;
-    height: 4.5em;
-}
 .wrapper {
-  width: 1000px;
-  height: auto;
-  margin: 0 auto;
+    text-align: center;
 }
-.wrapper .box {
-    width: 938px;
-    height: auto;
-    margin: 0 auto;
-}
-.wrapper ul > li {
-    float:left;
+.wrapper .box .row {
+    display: inline-block;
     width: 300px;
     height: 250px;
-    margin-right: 1em;
+    margin-left: .5em;
+    margin-right: .5em;
     margin-top: 2em; 
     border-radius: 12px;
     background: #EFF9FA;
@@ -118,18 +108,13 @@ header {
     position: relative; 
     overflow: hidden; 
 }
-.wrapper ul > li:nth-child(2n+1) {
-    background: #F4F6FB;
-}
 
-.wrapper ul > li:nth-child(3n){
-    margin-right: 0;
-}
+
+
 /*--------------------------------------------练习1*/
 .wrapper .box .row .bg {
     width: 100%;
     height: 100%;
-    overflow: hidden;
 }
 .wrapper .box .exe-1 .bg {
     background: url(../exercise-1/one.png) no-repeat top center;
