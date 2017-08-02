@@ -84,6 +84,7 @@ li {
     -webkit-animation: rotation 43s ease-in-out infinite;
         -moz-animation: rotation 3s ease-in-out infinite;
         animation: rotation 3s ease-in-out infinite;
+    position: relative;
 }
 .circle::after {
     width: 5px;
@@ -92,6 +93,8 @@ li {
     border-radius: 50%;
     position: absolute;
     content: "";
+    left: 13px;
+
 }
 @-webkit-keyframes rotation {
     0% {-webkit-transform: rotate(0deg);}
