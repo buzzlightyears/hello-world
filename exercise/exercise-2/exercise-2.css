@@ -37,8 +37,8 @@ li {
     margin: 0 auto;
     border-radius: 3px;
     -webkit-animation: charge 3s linear infinite;
-    -moz-animation: charge 3s linear infinite;
-    animation: charge 3s linear infinite;
+        -moz-animation: charge 3s linear infinite;
+        animation: charge 3s linear infinite;
 }
 .battery::after {
     content: "";
@@ -70,8 +70,8 @@ li {
     border-radius: 50%;
     margin: 45px auto;
     -webkit-animation: rotation 43s ease-in-out infinite;
-    -moz-animation: rotation 3s ease-in-out infinite;
-    animation: rotation 3s ease-in-out infinite;
+        -moz-animation: rotation 3s ease-in-out infinite;
+        animation: rotation 3s ease-in-out infinite;
 }
 .circle::after {
     width: 5px;
@@ -103,8 +103,8 @@ li {
     position: absolute;
     left: 38px;
     -webkit-animation: typing 1s linear infinite alternate;
-    -moz-animation: typing 1s linear infinite alternate;
-    animation: typing 1s linear infinite alternate; 
+        -moz-animation: typing 1s linear infinite alternate;
+        animation: typing 1s linear infinite alternate; 
 }
 @-webkit-keyframes typing {
     0%{background-color: rgba(37, 40, 46, 1);
@@ -148,8 +148,8 @@ li {
     box-shadow: -12px 0 0 rgba(37, 40, 46, 1);
     margin: 57px auto;
     -webkit-animation: cirl 1s ease-in-out infinite alternate;
-    -moz-animation: cirl 1s ease-in-out infinite alternate;
-    animation: cirl 1s ease-in-out infinite alternate;
+        -moz-animation: cirl 1s ease-in-out infinite alternate;
+        animation: cirl 1s ease-in-out infinite alternate;
 }
 @-webkit-keyframes cirl {
     0% {opacity: 0.1; -webkit-transform: rotate(0deg) scale(1);}
@@ -192,11 +192,11 @@ li {
     top: 20px;
     background: rgba(37, 40, 46, 1);
     -webkit-transform-origin: 1px 1px;
-    -moz-transform-origin: 1px 1px;
-    transform-origin: 1px 1px;
+        -moz-transform-origin: 1px 1px;
+        transform-origin: 1px 1px;
     -webkit-animation: dashboard-hand 1s linear infinite alternate;
-    -moz-animation: dashboard-hand 1s linear infinite alternate;
-    animation: dashboard-hand 1s linear infinite alternate;
+        -moz-animation: dashboard-hand 1s linear infinite alternate;
+        animation: dashboard-hand 1s linear infinite alternate;
 }
 @-webkit-keyframes dashboard-hand {
     0% {-webkit-transform: rotate(-160deg);}
@@ -223,8 +223,8 @@ li {
                 40px 0 0 0 rgba(37, 40, 46, 1),
                 50px 0 0 0 rgba(37, 40, 46, 1);
     -webkit-animation: rain 3s linear infinite alternate;
-    -moz-animation: rain 3s linear infinite alternate;
-    animation: rain 3s linear infinite alternate;            
+        -moz-animation: rain 3s linear infinite alternate;
+        animation: rain 3s linear infinite alternate;            
 }
 .cloud::after {
     content: "";
@@ -234,8 +234,8 @@ li {
     position: absolute;
     left: 0px;
     -webkit-animation: line-flow 3s linear infinite ;
-    -moz-animation: line-flow 3s linear infinite ;
-    animation: line-flow 3s linear infinite ;
+        -moz-animation: line-flow 3s linear infinite ;
+        animation: line-flow 3s linear infinite ;
 }
 @-webkit-keyframes rain {
     0%{box-shadow: 10px 0 0 0 rgba(37, 40, 46, .9),
@@ -296,8 +296,8 @@ li {
     border: 1px solid rgba(37, 40, 46, 1);
     margin: 49px auto;
     -webkit-animation: fill-color 3s linear infinite;
-    -moz-animation: fill-color 3s linear infinite;
-    animation: fill-color 3s linear infinite;
+        -moz-animation: fill-color 3s linear infinite;
+        animation: fill-color 3s linear infinite;
     position: relative;
 }
 .loading-7::after {
@@ -309,8 +309,8 @@ li {
     height: 5px;
     background: rgba(37, 40, 46, 1);
     -webkit-animation: square-move 2s linear infinite;
-    -moz-animation: square-move 2s linear infinite;
-    animation: square-move 2s linear infinite;
+        -moz-animation: square-move 2s linear infinite;
+        animation: square-move 2s linear infinite;
 }
 @-webkit-keyframes fill-color {
     0% {box-shadow: inset 0 0 0 rgba(37, 40, 46, 0);}
@@ -358,25 +358,25 @@ li {
     content: "";
     background: rgba(37, 40, 46, 1);
     -webkit-transform-origin: 1px 1px;
-    -moz-transform-origin: 1px 1px;
-    transform-origin: 1px 1px;
+        -moz-transform-origin: 1px 1px;
+        transform-origin: 1px 1px;
     -webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        transform: rotate(-90deg);
 }
 .loading-8::before {
     width: 14px;
     height: 2px; 
     -webkit-animation: time-1 2s linear infinite;
-    -moz-animation: time-1 2s linear infinite;
-    animation: time-1 2s linear infinite;
+        -moz-animation: time-1 2s linear infinite;
+        animation: time-1 2s linear infinite;
 }
 .loading-8::after {
     width: 10px;
     height: 2px;
     -webkit-animation: time-2 6s linear infinite;
-    -moz-animation: time-2 6s linear infinite;
-    animation: time-2 6s linear infinite;
+        -moz-animation: time-2 6s linear infinite;
+        animation: time-2 6s linear infinite;
 }
 @-webkit-keyframes time-1 {
     0% {-webkit-transform: rotate(-90deg);}
@@ -421,11 +421,11 @@ li {
     border: 2px solid rgba(37, 40, 46, 1);
     border-radius: 50% 50% 50% 0;
     -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        transform: rotate(-45deg);
     -webkit-animation: move-9 1s linear infinite;
-    -moz-animation: move-9 1s linear infinite;
-    animation: move-9 1s linear infinite;
+        -moz-animation: move-9 1s linear infinite;
+        animation: move-9 1s linear infinite;
 }
 @-webkit-keyframes move-9 {
     0%{top: -30px;}
@@ -471,8 +471,8 @@ li {
     top: 12px;
     left: 1px;
     -webkit-animation: eyes 2s ease-in-out infinite alternate;
-    -moz-animation: eyes 2s ease-in-out infinite alternate;
-    animation: eyes 2s ease-in-out infinite alternate;
+        -moz-animation: eyes 2s ease-in-out infinite alternate;
+        animation: eyes 2s ease-in-out infinite alternate;
 }
 @-webkit-keyframes eyes {
     0% {left: 1px}
@@ -518,8 +518,8 @@ li {
                 7px -8px 0 0 rgba(37, 40, 46, 1),
                 14px 0 0 0 rgba(37, 40, 46, 1);
     -webkit-animation: four 1s ease-out infinite;
-    -moz-animation: four 1s ease-out infinite;
-    animation: four 1s ease-out infinite;
+        -moz-animation: four 1s ease-out infinite;
+        animation: four 1s ease-out infinite;
 }
 @-webkit-keyframes four {
     0% {height: 6px;}
@@ -535,4 +535,35 @@ li {
     0% {height: 6px;}
     50% {height: 0px;}
     100% {height: 0px;}
+}
+/*------------------------------------------------loading-12*/
+.loading-12 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid rgba(37, 40, 46, 1);
+    margin: 45px auto;
+    position: relative;
+    -webkit-animation:  scal 1s linear infinite alternate;
+}
+.loading-12::after {
+    position: absolute;
+    left: 18px;
+    top: 18px;
+    content: "";
+    width: 2px;
+    height: 8px;
+    background: rgba(37, 40, 46, 1);
+    border-radius: 1px;
+    -webkit-transform-origin: 1px 1px;
+        -moz-transform-origin: 1px 1px;
+        transform-origin: 1px 1px;
+    -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        transform: rotate(-45deg); 
+   
+}
+@-webkit-keyframes scal {
+    0% {-webkit-transform: scale(1)}
+    100% {-webkit-transform: scale(1.5)}
 }

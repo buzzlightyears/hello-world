@@ -129,13 +129,11 @@ header {
 .wrapper .box .row .bg {
     width: 100%;
     height: 100%;
-    background: url(../exercise-1/one.png) no-repeat top center;
     overflow: hidden;
-    background-size: auto 250px;
 }
 .wrapper .box .exe-1 .bg {
-    
-     
+    background: url(../exercise-1/one.png) no-repeat top center;
+    background-size: auto 250px;     
 }
 .wrapper .box .row .span {
     width: 300px;
@@ -161,5 +159,6 @@ wrapper .box .row .bg:hover {
 }
 /*--------------------------------------------练习2*/
 .wrapper .box .exe-2 .bg {
-    
+    background: url(../exercise-2/two.png) no-repeat top center;
+    background-size: auto 250px;
 }
