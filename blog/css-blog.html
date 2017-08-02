@@ -98,7 +98,7 @@
     }
 /* ------------------------------------------------article-*/
     .article {
-        width: 50%;
+        width: 100%;
         height: auto;
         margin: 2em auto;
     }
@@ -141,6 +141,21 @@
         fill: #92BDD9;
     }
 
+@media only screen and (min-width:1001px) {
+    .article {
+    width: 50%;
+   }
+}
+@media only screen and (max-width: 1000px) and (min-width: 600px) {
+    .article {
+    width: 80%;
+   }
+}
+@media only screen and (max-width:600px) {
+    .article {
+    width: 90%;
+   }
+}
     </style>
 </head>
 
