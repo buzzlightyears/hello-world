@@ -10,23 +10,37 @@ li {
     list-style: none;
 }
 .show-all ul {
-    text-align: center;
-    margin-left: 20%;
-    margin-right: 20%;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+@media only screen and (min-width:1001px) {
+    .show-all ul {
+    width: 800px;
+   ;}
+}
+@media only screen and (max-width: 1000px) and (min-width: 600px) {
+    .show-all ul {
+    width: 600px;
+   ;}
+}
+@media only screen and (max-width:600px) {
+    .show-all ul {
+    width: 400px;
+   ;}
 }
 .show-all ul li {
-    display: inline-block;
+    float: left;
     width: 120px;
     height: 120px;
     border-radius: 0px;
     background: rgba(255, 255, 255, .4);
-    margin-right: 80px;
+    margin-right: 40px;
+    margin-left: 40px;
     margin-top: 80px;
     position: relative;
 }
-.show-all ul li:nth-child(4n){
-    margin-right: 0;
-}
+
 /*------------------------------------------------loading-1*/
 .battery {
     width: 40px;
@@ -190,6 +204,7 @@ li {
     width: 14px;
     height: 2px;
     top: 20px;
+    left: 15px;
     background: rgba(37, 40, 46, 1);
     -webkit-transform-origin: 1px 1px;
         -moz-transform-origin: 1px 1px;
