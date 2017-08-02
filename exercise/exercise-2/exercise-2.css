@@ -486,3 +486,53 @@ li {
     0% {left: 1px}
     100% {left: 11px;}
 }
+/*------------------------------------------------loading-11*/
+.loading-11 {
+    width: 22px;
+    height: 26px;
+    border: 1px solid rgba(37, 40, 46, 1);
+    border-radius: 0 0 6px 6px;
+    margin: 45px 45px;
+    position: relative;
+}
+.loading-11::before, .loading-11::after {
+    position: absolute;
+    content: "";
+}
+.loading-11::before {
+    width: 6px;
+    height: 15px;
+    border: 1px solid rgba(37, 40, 46, 1);
+    border-left: none;
+    border-radius: 0 6px 14px 0;
+    left: 24px;
+    top: 1px;
+}
+.loading-11::after {
+    width: 1px;
+    height: 6px;
+    background: rgba(37, 40, 46, 1);
+    top: -10px;
+    left: 3px;
+    box-shadow: 7px 0 0 0 rgba(37, 40, 46, 1),
+                7px -8px 0 0 rgba(37, 40, 46, 1),
+                14px 0 0 0 rgba(37, 40, 46, 1);
+    -webkit-animation: four 1s ease-out infinite;
+    -moz-animation: four 1s ease-out infinite;
+    animation: four 1s ease-out infinite;
+}
+@-webkit-keyframes four {
+    0% {height: 6px;}
+    50% {height: 0px;}
+    100% {height: 0px;}
+}
+@-moz-keyframes four {
+    0% {height: 6px;}
+    50% {height: 0px;}
+    100% {height: 0px;}
+}
+@keyframes four {
+    0% {height: 6px;}
+    50% {height: 0px;}
+    100% {height: 0px;}
+}
