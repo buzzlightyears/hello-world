@@ -402,3 +402,43 @@ li {
     0% {transform: rotate(-90deg);}
     100% {transform: rotate(270deg);}
 }
+/*------------------------------------------------loading-9*/
+.loading-9 {
+    width: 30px;
+    height: 14px;
+    background: rgba(37, 40, 46, .5);
+    border-radius: 50%;
+    margin: 68px auto;
+    position: relative;
+}
+.loading-9::after {
+    position: absolute;
+    top: -30px;
+    left: 3px;
+    content:"";
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(37, 40, 46, 1);
+    border-radius: 50% 50% 50% 0;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-animation: move-9 1s linear infinite;
+    -moz-animation: move-9 1s linear infinite;
+    animation: move-9 1s linear infinite;
+}
+@-webkit-keyframes move-9 {
+    0%{top: -30px;}
+    50%{top: -25px;}
+    100%{top: -30px;}
+}
+@-moz-keyframes move-9 {
+    0%{top: -30px;}
+    50%{top: -25px;}
+    100%{top: -30px;}
+}
+@keyframes move-9 {
+    0%{top: -30px;}
+    50%{top: -25px;}
+    100%{top: -30px;}
+}
