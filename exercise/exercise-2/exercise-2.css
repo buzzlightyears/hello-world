@@ -406,7 +406,7 @@ li {
 .loading-9 {
     width: 30px;
     height: 14px;
-    background: rgba(37, 40, 46, .5);
+    background: rgba(37, 40, 46, .2);
     border-radius: 50%;
     margin: 68px auto;
     position: relative;
@@ -441,4 +441,48 @@ li {
     0%{top: -30px;}
     50%{top: -25px;}
     100%{top: -30px;}
+}
+/*------------------------------------------------loading-10*/
+.loading-10 {
+    width: 20px;
+    height: 22px;
+    border-radius: 50%;
+    border: 1px  solid rgba(37, 40, 46, 1);
+    margin: 49px 35px;
+    position: relative;
+}
+.loading-10::before {
+    position: absolute;
+    left: 30px;
+    content: "";
+    width: 20px;
+    height: 22px;
+    border-radius: 50%;
+    border: 1px  solid rgba(37, 40, 46, 1);
+}
+.loading-10::after {
+    position: absolute;
+    content: "";
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: rgba(37, 40, 46, 1);
+    box-shadow: 30px 0 0 0 rgba(37, 40, 46, 1);
+    top: 12px;
+    left: 1px;
+    -webkit-animation: eyes 2s ease-in-out infinite alternate;
+    -moz-animation: eyes 2s ease-in-out infinite alternate;
+    animation: eyes 2s ease-in-out infinite alternate;
+}
+@-webkit-keyframes eyes {
+    0% {left: 1px}
+    100% {left: 11px;}
+}
+@-moz-keyframes eyes {
+    0% {left: 1px}
+    100% {left: 11px;}
+}
+@keyframes eyes {
+    0% {left: 1px}
+    100% {left: 11px;}
 }
