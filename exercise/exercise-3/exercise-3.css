@@ -170,12 +170,14 @@ input:checked + .toggle .toggle-handler {
 }
 .tog-1::before {
     border-radius: 5px 0 0 5px;
+    width: 43px;
 }
 .tog-2::before {
     border-radius: 0;
-    left: 1px;
+   left: 1px;
 }
 .tog-3::before {
     border-radius: 0 5px 5px 0;
-    left: -1px;
+    width: 43px;
+    left: 0px;
 }
