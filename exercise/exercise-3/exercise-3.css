@@ -48,7 +48,7 @@ body {
 }
 /*------------------------------------------------------box-1*/
 
-.toggle-wrapper, .toggle-1 {
+.toggle-wrapper{
     position: absolute;;
     left: 50%;
     top: 50%;
@@ -134,11 +134,27 @@ input:checked + .toggle .toggle-handler {
 .toggle-1{
     cursor: pointer;
     position: absolute;
-    width: 60px;
-    height: 60px;
+    width: 46px;
+    height: 46px;
     background: #ABB6BA;
     background-image: -moz-linear-gradient(top, #ABB6BA 0%, #e1d8ce 100%);
     background-image: -webkit-linear-gradient(top, #ABB6BA 0%, #e1d8ce 100%);
     background-image: linear-gradient(to bottom, #ABB6BA 0%, #e1d8ce 100%);
-    z-index: 1;
+}
+.tog-1 {
+    border-radius: 5px 0 0 5px;
+}
+.tog-2 {
+    left: 46px;
+}
+.tog-3 {
+    left: 92px;
+    border-radius: 0px 5px 5px 0;
+}
+.toggle-all {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -69px;
+    margin-top: -23px;
 }
