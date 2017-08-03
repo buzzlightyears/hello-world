@@ -91,7 +91,6 @@
 li {
     list-style: none;
 }
-
 .wrapper {
     text-align: center;
 }
@@ -108,8 +107,6 @@ li {
     position: relative; 
     overflow: hidden; 
 }
-
-
 
 /*--------------------------------------------练习1*/
 .wrapper .box .row .bg {
