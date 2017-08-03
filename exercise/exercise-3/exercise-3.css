@@ -158,15 +158,24 @@ input:checked + .toggle .toggle-handler {
     margin-left: -69px;
     margin-top: -23px;
 }
-.tog-1::before {
+.tog-1::before, .tog-2::before, .tog-3::before {
     position: absolute;
     content: "";
     width: 44px;
     height: 40px;
     background:#fff;
     z-index: 1;
-    border-radius: 5px 0 0 5px;
     top: 3px;
     left: 3px;
-
+}
+.tog-1::before {
+    border-radius: 5px 0 0 5px;
+}
+.tog-2::before {
+    border-radius: 0;
+    left: 1px;
+}
+.tog-3::before {
+    border-radius: 0 5px 5px 0;
+    left: -1px;
 }
