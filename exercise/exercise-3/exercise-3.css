@@ -140,6 +140,8 @@ input:checked + .toggle .toggle-handler {
     background-image: -moz-linear-gradient(top, #D9D9D9 0%, #DDDDDD 100%);
     background-image: -webkit-linear-gradient(top, #D9D9D9 0%, #DDDDDD 100%);
     background-image: linear-gradient(to bottom, #D9D9D9 0%, #DDDDDD 100%);
+    box-shadow: inset 0 1px 1px #C0C0C0,
+                inset 0 -1px 1px #fff;
 }
 .tog-1 {
     border-radius: 5px 0 0 5px;
@@ -168,22 +170,22 @@ input:checked + .toggle .toggle-handler {
     top: 3px;
     left: 3px;
     box-shadow: 0px 0 0 0 #A8A8A8,
-                0 2px 2px #A8A8A8,
+                0 2px 2px #A7A7A7,
                 inset 0 -1px 1px #656565,
-                inset 1px 0 1px #C3C3C3;
+                inset 1px 0 1px #DDDDDD;
                 
 }
 .tog-1::before {
-    border-radius: 5px 0 0 5px;
+    border-radius: 5px 1px 1px 5px;
     width: 43px;
     
 }
 .tog-2::before {
-    border-radius: 0;
+    border-radius: 1px;
    left: 1px;
 }
 .tog-3::before {
-    border-radius: 0 5px 5px 0;
+    border-radius: 1px 5px 5px 1px;
     width: 43px;
     left: 0px;
 }
