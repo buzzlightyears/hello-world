@@ -18,6 +18,7 @@ body {
     background: #fff;
     margin-bottom: 10px;
     position: relative;
+    z-index: 1;
 }
 .box-1 {
     margin-right: 20px;
@@ -136,9 +137,9 @@ input:checked + .toggle .toggle-handler {
     position: relative;
     width: 120px;
     height: 46px;
-    background: #3ba97f;
+    background: #50C095;
     border-radius:5px;
-    box-shadow: 0 8px 1px rgba(0, 0, 0, .1);
+    
 }
 .checkbox::after {
     position: absolute;
@@ -151,25 +152,24 @@ input:checked + .toggle .toggle-handler {
     left: 30px;
     color: #fff;
     z-index: 4;
-    top: -6px;
+    
 }
 .checkbox::before {
     position: absolute;
     width: 120px;
     height: 46px;
-    background: #50C095;
+    background: #3ba97f;
     border-radius:5px;
     content: "";
+    top: 6px;
     left: 0px;
-    top: -6px;
-    
+    z-index:-1;
+    box-shadow: 0 6px 1px rgba(0, 0, 0, .1);
 }
 input:checked + .checkbox {
-    box-shadow: 0 4px 1px rgba(0, 0, 0, .1);
+    top: 4px;
 }
 input:checked + .checkbox::before {
-    top: -3px;
-}
-input:checked + .checkbox::after {
-    box-shadow: 0 3px 0 0 rgba(0, 0, 0, .1);
+    top:2px;
+    box-shadow: 0 2px 1px rgba(0, 0, 0, .1);
 }
