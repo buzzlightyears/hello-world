@@ -10,8 +10,34 @@ body {
     height: 150px;
     background: #fff;  
     margin: 50px auto;
+    position: relative;
 }
 .shadow p {
     text-align: center;
     line-height: 150px;
+}
+.shadow::before {
+    position: absolute;
+    top: 130px;
+    content: "";
+    width: 200px;
+    height: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .2);
+    z-index: -1;
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+}
+.shadow::after {
+    position: absolute;
+    top: 130px;
+    right: 0;
+    content: "";
+    width: 200px;
+    height: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .2);
+    z-index: -1;
+    -webkit-transform: rotate(5deg);
+    -moz-transform: rotate(5deg);
+    transform: rotate(5deg);
 }
