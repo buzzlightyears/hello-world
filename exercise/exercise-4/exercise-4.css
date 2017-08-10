@@ -17,34 +17,29 @@ body {
     text-align: center;
     line-height: 150px;
 }
-.shadow-1::before {
+.shadow-1:before, .shadow-1:after {
     position: absolute;
     top: 130px;
-    left: 5px;
     content: "";
     width: 200px;
     height: 10px;
     box-shadow: 0 10px 15px rgba(0, 0, 0, .2);
     z-index: -1;
+}
+.shadow-1:before {
+    left: 5px;
     -webkit-transform: rotate(-5deg);
     -moz-transform: rotate(-5deg);
     transform: rotate(-5deg);
 }
-.shadow-1::after {
-    position: absolute;
-    top: 130px;
+.shadow-1:after {
     right: 5px;
-    content: "";
-    width: 200px;
-    height: 10px;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, .2);
-    z-index: -1;
     -webkit-transform: rotate(5deg);
     -moz-transform: rotate(5deg);
     transform: rotate(5deg);
 }
 /*--------------------------------------------shadow-2*/
-.shadow-2::before {
+.shadow-2:before {
     position: absolute;
     top: 95px;
     left: 5px;
@@ -56,7 +51,7 @@ body {
     z-index: -1;   
 }
 /*--------------------------------------------shadow-3*/
-.shadow-3::before {
+.shadow-3:before {
     position: absolute;
     top: 140px;
     left: -10px;
@@ -67,7 +62,7 @@ body {
     box-shadow: 0 10px 4px rgba(0, 0, 0, .5);
     z-index: -1;   
 }
-.shadow-3::after{
+.shadow-3:after{
     position: absolute;
     top: 130px;
     left: 10px;
