@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    background: #F1F9FB;
+    margin: 60px auto;
+}
+
+/*-----------------------------------------------------------*/
+.leaf-all {
+    width: 58px;
+    height: 58px;
+    position: relative;
+}
+.leaf:before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 0 50% 0 50%;
+    background: #ace;
+    margin: 2px;
+}
+.leaf {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.leaf-1 {
+    -webkit-animation: rotate1 3s ease-in-out infinite;
+         -moz-animation: rotate1 3s ease-in-out infinite;
+         animation: rotate1 3s ease-in-out infinite;
+}
+.leaf-2 {
+    -webkit-animation: rotate2 3s ease-in-out infinite;
+         -moz-animation: rotate2 3s ease-in-out infinite;
+         animation: rotate2 3s ease-in-out infinite;
+}
+.leaf-3 {
+    -webkit-animation: rotate3 3s ease-in-out infinite;
+         -moz-animation: rotate3 3s ease-in-out infinite;
+         animation: rotate3 3s ease-in-out infinite;
+}
+.leaf-4 {
+    -webkit-animation: rotate4 3s ease-in-out infinite;
+         -moz-animation: rotate4 3s ease-in-out infinite;
+         animation: rotate4 3s ease-in-out infinite;
+}
+.leaf-all {
+    -webkit-animation: rotate-all 3s linear infinite;
+         -moz-animation: rotate-all 3s linear infinite;
+         animation: rotate-all 3s linear infinite;
+}
+@-webkit-keyframes rotate-all {
+    0% {-webkit-transform: rotate(0)}
+    100% {-webkit-transform: rotate(360deg)}
+}
