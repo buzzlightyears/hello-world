@@ -178,3 +178,8 @@ wrapper .box .row .bg:hover {
     background: url(../exercise-9/nine.png) no-repeat top center;
     background-size: auto 250px;
 }
+/*--------------------------------------------练习10*/
+.wrapper .box .exe-10 .bg {
+    background: url(../exercise-10/ten.png) no-repeat top center;
+    background-size: auto 250px;
+}

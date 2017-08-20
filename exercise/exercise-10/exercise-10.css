@@ -25,6 +25,7 @@ body {
 .right {
     background: #fff;
 }
+/*-------------------------------------------------button--*/
 .button-left, .button-right {
     position: absolute;
     left: 50%;
@@ -41,15 +42,6 @@ body {
 .button-right {
     background: #7A8394;
 }
-.button-left:after, .button-right:after {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-left: -90px;
-    margin-top: -10px;
-    content: "SOMEGHING";
-    letter-spacing:10px;
-} 
 .button-left:hover {
     background: #15191A;
     box-shadow: 0 0 0 3px #fff;
@@ -58,11 +50,25 @@ body {
     background: #fff;
     box-shadow: 0 0 0 3px #15191A;
 }
-/*---------------------------------------------------*/
-.button-left:hover:after {
-    margin-top: -60px;
+/*-------------------------------------------------text--*/
+.button-left:after, .button-right:after {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -90px;
+    margin-top: -10px;
+    content: "SOMEGHING";
+    letter-spacing:10px;
+    transition: all 1s ;
+    color: rgba(0, 0, 0, 0)
+} 
+/*-------------------------------------------------text:hover--*/
+.button-left:hover:after, .button-right:hover:after{
+    margin-top: -70px;
     color: #fff;
+    letter-spacing:14px;
+    margin-left: -105px;
 }
 .button-right:hover:after {
-    margin-top: -60px;
+    color: #15191A;
 }
