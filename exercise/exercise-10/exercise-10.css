@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0 ;
+    outline: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+	flex-direction: column;
+	justify-content: center;
+    align-items: center;
+    background: #F1F9FB;
+}
+.left, .right {
+    float: left;
+    width: 400px;
+    height: 400px;
+}
+.left {
+    background: #7A8393;
+}
+.right {
+    background: #fff;
+}
+.left:before, .right:before {
+
+}
