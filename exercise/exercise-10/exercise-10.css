@@ -13,6 +13,11 @@ body {
     align-items: center;
     background: #F1F9FB;
 }
+.box-all {
+    width: 800px;
+    height: auto;
+    margin: 0 auot;
+}
 .left, .right {
     float: left;
     width: 400px;
@@ -24,6 +29,34 @@ body {
 }
 .right {
     background: #fff;
+}
+/*------------------------------------------------------响应宽度*/
+@media only screen and (min-width:1001px) {
+    .left, .right {
+    width: 400px;
+    height: 400px;
+   }
+}
+@media only screen and (max-width: 1000px) and (min-width: 600px) {
+    .box-all {
+        width: 600px;
+        height: auto;
+    }
+    .left, .right {
+        width: 300px;
+        height: 300px;
+       }
+}
+@media only screen and (max-width:600px) {
+    .box-all {
+        width: 300px;
+        height: auto;
+    }
+    .left, .right {
+        width: 300px;
+        height: 300px;
+       
+   }
 }
 /*-------------------------------------------------button--*/
 .button-left, .button-right {
