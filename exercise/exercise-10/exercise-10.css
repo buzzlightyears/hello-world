@@ -17,6 +17,7 @@ body {
     float: left;
     width: 400px;
     height: 400px;
+    position: relative;
 }
 .left {
     background: #7A8393;
@@ -24,6 +25,44 @@ body {
 .right {
     background: #fff;
 }
-.left:before, .right:before {
-
+.button-left, .button-right {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -18px;
+    margin-top: -30px;
+    width: 36px;
+    height: 60px;
+    border-radius: 18px;
+    background: #fff;
+    cursor: pointer;
+    box-shadow: 0 0 0 3px #15191A;
+}
+.button-right {
+    background: #7A8394;
+}
+.button-left:after, .button-right:after {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -90px;
+    margin-top: -10px;
+    content: "SOMEGHING";
+    letter-spacing:10px;
+} 
+.button-left:hover {
+    background: #15191A;
+    box-shadow: 0 0 0 3px #fff;
+}
+.button-right:hover {
+    background: #fff;
+    box-shadow: 0 0 0 3px #15191A;
+}
+/*---------------------------------------------------*/
+.button-left:hover:after {
+    margin-top: -60px;
+    color: #fff;
+}
+.button-right:hover:after {
+    margin-top: -60px;
 }
