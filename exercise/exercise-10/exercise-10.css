@@ -68,20 +68,44 @@ body {
     width: 36px;
     height: 60px;
     border-radius: 18px;
-    background: #fff;
+    background: rgba(0, 0, 0, 0);
     cursor: pointer;
-    box-shadow: 0 0 0 3px #15191A;
-}
-.button-right {
-    background: #7A8394;
-}
-.button-left:hover {
-    background: #15191A;
     box-shadow: 0 0 0 3px #fff;
 }
-.button-right:hover {
+.button-right {
+    box-shadow: 0 0 0 3px #7A8394;
+}
+.button-left:hover {
     background: #fff;
-    box-shadow: 0 0 0 3px #15191A;
+    
+}
+.button-right:hover {
+    background: #7A8394;
+    
+}
+/*-------------------------------------------------circle--*/
+.button-left:before, .button-right:before {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    margin-left: -5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    content: "";
+    transition: all 1s ;
+    background: #fff;
+} 
+.button-right:before {
+    background: #7A8394;
+}
+/*-------------------------------------------------circle:hover--*/
+.button-left:hover:before, .button-right:hover:before{
+    margin-top: 15px;
+    background: #7A8394;
+}
+.button-right:hover:before {
+    background: #fff;
 }
 /*-------------------------------------------------text--*/
 .button-left:after, .button-right:after {
@@ -103,5 +127,5 @@ body {
     margin-left: -105px;
 }
 .button-right:hover:after {
-    color: #15191A;
+    color: #7A8394;
 }
