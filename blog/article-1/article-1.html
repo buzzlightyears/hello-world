@@ -7,15 +7,120 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        h1,
-        h2,
-        h3,
-        p,
-        span,
-        a {
+        * {
             margin: 0;
             padding: 0;
         }
+
+  /* --------------------------------------------------------------菜单栏-*/
+  header {
+        height: 4.5em;
+        background: #15191A;
+        position: relative;
+    }
+    header ul {
+        position: absolute;
+        right: 20%;
+    }
+    header ul li {    
+        line-height: 4.5em;
+        list-style: none;
+        color: #fff;
+        display: inline-block;
+        margin-left: 40px; 
+        position: relative;
+    }
+    header ul li:after {
+        position: absolute;
+        left: -50%;
+        bottom: 20px;
+        content: "";
+        width: 200%;
+        height: 1px;
+        background: #fff;
+        transform: scale(0);
+        -webkit-transition: all 1s;
+        transition: all 1s;
+    }
+    header ul li:hover:after {    
+        transform: scale(1)
+    }
+    
+/* ----------------------------------------------定位菜单图标-*/
+
+    .lines {
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        margin-top: -11px;
+        cursor: pointer;
+
+    }
+/* ---------------------------------统一设置三条细线的样式和动画-*/
+
+    .lines span{
+        display: block;
+        width: 25px;
+        height:2px;
+        background: #fff;
+        margin: 4px 0;
+        
+    }
+    .button span{
+        -webkit-animation: all 1s ease-in-out 1;
+        animation: all 1s ease-in-out 1;
+    }
+/* ------------------------------------调用每一条细线的动画名称-*/
+
+    .button:hover span:nth-child(1) {
+        -webkit-animation-name: top;
+        animation-name: top;
+    }
+    .button:hover span:nth-child(2) {
+        -webkit-animation-name: mid;
+        animation-name: mid;
+    }
+    .button:hover span:nth-child(3) {
+        -webkit-animation-name: bot;
+        animation-name: bot;
+    }
+/* ------------------------------------------------设置关键帧-*/
+
+    @-webkit-keyframes top {             /*------------上移--*/
+        0% { transform: translate(0,0)}
+        50% { transform: translate(0,-10px)}
+        60% { transform: translate(0,-10px)}
+        100% { transform: translate(0,0)}
+    }
+    @keyframes top{
+        0% { transform: translate(0,0)}
+        50% { transform: translate(0,-10px)}
+        60% { transform: translate(0,-10px)}
+        100% { transform: translate(0,0)}
+    }
+
+    @-webkit-keyframes mid {               /*-----------旋转--*/
+        0% { transform: rotate(0deg)}
+        100% { transform: rotate(180deg)}
+    }
+    @keyframes mid {                               
+        0% { transform: rotate(0deg)}
+        100% { transform: rotate(180deg)}
+    }
+
+    @-webkit-keyframes bot {           /*-----------下移--*/
+        0% { transform: translate(0,0)}
+        50% { transform: translate(0,10px)}
+        60% { transform: translate(0,10px)}
+        100% { transform: translate(0,0)}
+    }
+    @keyframes bot {                
+        0% { transform: translate(0,0)}
+        50% { transform: translate(0,10px)}
+        60% { transform: translate(0,10px)}
+        100% { transform: translate(0,0)}
+    } 
+
         /*------------------------------页面中实现效果--*/
 .show {
     background: #F1F9FB;   
@@ -144,21 +249,21 @@
 /*------------------------------页面中实现效果--*/
 
         .all {
-            width: 50%;
+            width: 100%;
             height: auto;
             margin: 2em auto;
         }
 
         main img {
-            width: 30em;
+            width: 100%;
             height: auto;
             margin-top: 2em;
             margin-bottom: 2em;
         }
 
-        header span {
+        .title span {
             color: #C0C1C2;
-            font-size: .9em;
+            font-size: .8em;
         }
 
         main .html-1 {
@@ -178,32 +283,50 @@
         }
 @media only screen and (min-width:1001px) {
     .all {
-    width: 50%;
+    width: 60%;
    }
 }
 @media only screen and (max-width: 1000px) and (min-width: 600px) {
     .all {
-    width: 80%;
+    width: 60%;
    }
 }
 @media only screen and (max-width:600px) {
     .all {
-    width: 90%;
+    width: 85%;
    }
-   main img {
-       width: 100%;
-       height: auto;
-   }
+   header ul {
+        right: 7.5%;
+    }
 }
     </style>
 </head>
 
 <body>
+    <header>
+        <a href="../index.html">
+            <div class="button">
+                <div class="lines">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </a>
+        <ul>
+            <a href="css-blog.html">
+                <li>文章</li>
+            </a>
+            <a href="../exercise/css-exercise.html">
+                <li>练习</li>
+            </a>
+        </ul>
+    </header>
     <div class="all">
-        <header>
-            <h1>CSS3实现动态进度条</h1>
-            <span class="name">2017年4月6日 10：20 &nbsp; by 巴斯光年</span>
-        </header>
+        <div class="title">
+            <h2>CSS3实现动态进度条</h2>
+            <span class="name">2017年4月6日 &nbsp; by 巴斯光年</span>
+        </div>
         <main>
             <div class="show">
                  <ul id="skill">
@@ -214,7 +337,7 @@
     </ul>
             </div>
             <p>首先分析一下这个进度条的结构：分别是标题、背景槽、颜色条。</p>
-            <h2>html结构：</h2>
+            <h3>html结构：</h3>
             <div class="html-1">
                 <pre>
 &lt;ul id="skill"&gt;
