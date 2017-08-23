@@ -12,8 +12,10 @@
             padding: 0;
         }
 img {
-     display: block;
-     
+     display: block;    
+}
+body {
+    background: #F1F9FB;
 }
 p {
     text-align: justify;
@@ -139,6 +141,9 @@ p {
             width: 60%;
             height: auto;
             margin: 2em auto;
+            background: #fff;
+            padding: 40px;
+            box-sizing: border-box;
         }
 
         main img {
@@ -227,52 +232,42 @@ background-position: right 20px bottom 20px;
                  </pre>
             </div>
             <p>背景图片将被指定到右下角，跟右边缘保持20px的偏移量，跟底边保持20px的偏移量。
-                    *如果只规定了一个关键词，那么第二个值将是"center"。<img src="article-3-3.png" /></p>
+                    *如果只规定了一个关键词，那么第二个值将是"center"。<img src="article-3-3.png" />然而，在不支持background-position属性的浏览器中，背景图片会回到默认位置。会干扰到文字的可读性。于是，需要提供一个回退方案，把 bottom right定位值写到background属性里面。</p>
             <div class="html-1">
                 <pre>
-footer {
-   background: #269C74;
-}
-.wrapper {
-  max-width:600px;
-  margin:1em auto;
-}
+background:url(xxx.jpg ) no-repeat bottom right #C4D9E6;
+background-position: right 20px bottom 20px;
                 </pre>
             </div>
-            <img src="article-2-2.png"/>
-            <p>有没有其他的办法，可以不用添加一层额外的元素呢？<br>
-               首先，margin：auto；在这个场景下发挥了什么作用？这条声明所产生的左右边距实际上都等于视口宽度的一半减去内容宽度的一半。由于半分比在这里是基于视口宽度来解析的，我们可以把这个外边距的值表达为 50% - 300px;实际上我们可以用 calc()函数，它允许我们在css中直接以这种简单的算式来指定属性的值。如果用calc() 取代原先的auto，这个内层容器的样式就会变成：</p>
+            <h3>2.background-origin 方案</h3>
+            <p>它规定 background-position 属性相对于什么位置来定位。语法：background-origin: padding-box|border-box|content-box;</p>
             <div class="html-1">
                 <pre>
-.wrapper {
-  max-width:600px;
-  margin:1em calc(50% - 300px);
-}
+padding:10px;
+background:url(xxx.jpg ) no-repeat bottom right #C4D9E6;
+background-origin: content-box;
                 </pre>
             </div>
-            <p>之所以要在页脚内加一层容器元素，唯一的原因就是为了给它的 margin 指定auto 关键字，从而实现内容的水平居中布局。不过现在可以被 calc（）取代了。我们还可以把这个长度值应用到父元素的padding上，而整个效果是保持不变的。</p>
+            <p>默认情况下，背景图片通过 padding-box 定位，如果把它的值改成content-box，那么图片距离边角的偏移量就跟内边距一样了。<img src="article-3-4.png"/></p>
+            <h3>3.calc() 方案</h3>
+            <p>语法：calc() = calc(四则运算) </p>
             <div class="html-1">
                 <pre>
-footer {
-  max-width:600px;
-  padding:1em calc(50% - 300px);
-  background:#269C74;
-}
+用于动态计算长度值。
+任何长度值都可以使用calc()函数进行计算；
+calc()函数支持 "+", "-", "*", "/" 运算；
+calc()函数使用标准的数学运算优先级规则；
                 </pre>
             </div>
-            <p>其实，如果把width 这一行删掉，也没有影响。这时为什么呢？<br>
-因为当内边距是padding:1em calc(50% - 300px);时，只能给内容留出600px（2x300px）的可用空间。只有把容器的 width 属性指定了 600px 之外（或大或小）的其他值，才能看出区别。由于我们想要的内容宽度本来就是600px，这一行声明其实就是可以去掉了。
-我们还可以为它增加一条回退样式来增强向后兼容性。这样即使浏览器不支持calc() ，我们至少可以得到一个相对合理的内边距。</p>
+            <p>在第一种方案中，我们想要把背景图片定位到距离底边20px, 且距离右边20px的位置。如果我们仍然以左上角偏移的思路来思考，起始就是希望它有一个 100%-20px 的水平偏移，以及100%-20px 的垂直偏移。所以我们可以把 calc() 函数在background-position 属性中使用：</p>
             <div class="html-1">
                 <pre>
-footer {
-  padding:1em;
-  padding:1em calc(50% - 300px);
-  background:#269C74;
-}
+background:url(xxx.jpg ) no-repeat #C4D9E6;
+background-position: calc(100% - 20px) calc(100% - 20px) ;
                 </pre>
             </div>
-            <p>终于，可以抛弃冗余的的标签了。</p>
+            <p>*需要注意的是，运算符 "-" 前后都需要保留一个空格，例如：width: calc(100% - 10px)；<img src="article-3-5.png"/>
+                参考书籍：Lea Verou《CSS揭秘》</p>
         </main>
     </div>
 </body>
