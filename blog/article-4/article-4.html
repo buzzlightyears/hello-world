@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+img {
+     display: block;    
+}
+body {
+    background: #F1F9FB;
+}
+p {
+    text-align: justify;
+    line-height: 26px;
+    word-break:break-all; /*支持IE，chrome，FF不支持*/
+    word-wrap:break-word;/*支持IE，chrome，FF*/
+}
+.title {
+    margin-bottom: 40px;
+}
+
+  /* --------------------------------------------------------------菜单栏-*/
+  header {
+        height: 4.5em;
+        background: #15191A;
+        position: relative;
+    }
+    header ul {
+        position: absolute;
+        right: 20%;
+    }
+    header ul li {    
+        line-height: 4.5em;
+        list-style: none;
+        color: #fff;
+        display: inline-block;
+        margin-left: 40px; 
+        position: relative;
+    }
+    header ul li:after {
+        position: absolute;
+        left: -50%;
+        bottom: 20px;
+        content: "";
+        width: 200%;
+        height: 1px;
+        background: #fff;
+        transform: scale(0);
+        -webkit-transition: all 1s;
+        transition: all 1s;
+    }
+    header ul li:hover:after {    
+        transform: scale(1)
+    }
+    
+/* ----------------------------------------------定位菜单图标-*/
+
+    .lines {
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        margin-top: -11px;
+        cursor: pointer;
+
+    }
+/* ---------------------------------统一设置三条细线的样式和动画-*/
+
+    .lines span{
+        display: block;
+        width: 25px;
+        height:2px;
+        background: #fff;
+        margin: 4px 0;
+        
+    }
+    .button span{
+        -webkit-animation: all 1s ease-in-out 1;
+        animation: all 1s ease-in-out 1;
+    }
+/* ------------------------------------调用每一条细线的动画名称-*/
+
+    .button:hover span:nth-child(1) {
+        -webkit-animation-name: top;
+        animation-name: top;
+    }
+    .button:hover span:nth-child(2) {
+        -webkit-animation-name: mid;
+        animation-name: mid;
+    }
+    .button:hover span:nth-child(3) {
+        -webkit-animation-name: bot;
+        animation-name: bot;
+    }
+/* ------------------------------------------------设置关键帧-*/
+
+    @-webkit-keyframes top {             /*------------上移--*/
+        0% { transform: translate(0,0)}
+        50% { transform: translate(0,-10px)}
+        60% { transform: translate(0,-10px)}
+        100% { transform: translate(0,0)}
+    }
+    @keyframes top{
+        0% { transform: translate(0,0)}
+        50% { transform: translate(0,-10px)}
+        60% { transform: translate(0,-10px)}
+        100% { transform: translate(0,0)}
+    }
+
+    @-webkit-keyframes mid {               /*-----------旋转--*/
+        0% { transform: rotate(0deg)}
+        100% { transform: rotate(180deg)}
+    }
+    @keyframes mid {                               
+        0% { transform: rotate(0deg)}
+        100% { transform: rotate(180deg)}
+    }
+
+    @-webkit-keyframes bot {           /*-----------下移--*/
+        0% { transform: translate(0,0)}
+        50% { transform: translate(0,10px)}
+        60% { transform: translate(0,10px)}
+        100% { transform: translate(0,0)}
+    }
+    @keyframes bot {                
+        0% { transform: translate(0,0)}
+        50% { transform: translate(0,10px)}
+        60% { transform: translate(0,10px)}
+        100% { transform: translate(0,0)}
+    }                 
+/*------------------------------页面中实现效果--*/
+
+        .all {
+            width: 60%;
+            height: auto;
+            margin: 2em auto;
+            background: #fff;
+            padding: 40px;
+            box-sizing: border-box;
+        }
+
+        main img {
+            width: 100%;
+            height: auto;
+            margin-top: 2em;
+            margin-bottom: 2em;
+        }
+
+        .title span {
+            color: #C0C1C2;
+            font-size: .8em;
+        }
+
+        main .html-1 {
+            width: auto;
+            background: #F6F6F6;
+            padding: 1em 1.5em;
+            margin: 1em 0;
+            
+        }
+        main .html-1 pre {
+            width: auto;
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word
+        }
+@media only screen and (min-width:1001px) {
+    .all {
+    width: 60%;
+   }
+}
+@media only screen and (max-width: 1000px) and (min-width: 600px) {
+    .all {
+    width: 60%;
+   }
+}
+@media only screen and (max-width:600px) {
+    .all {
+    width: 85%;
+   }
+   header ul {
+        right: 7.5%;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="../index.html">
+            <div class="button">
+                <div class="lines">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </a>
+        <ul>
+            <a href="css-blog.html">
+                <li>文章</li>
+            </a>
+            <a href="../exercise/css-exercise.html">
+                <li>练习</li>
+            </a>
+        </ul>
+    </header>
+    <div class="all">
+        <div class="title">
+            <h2>【width：min-content】自适应内部元素</h2>
+            <span class="name">2017年06月17日 &nbsp; by 巴斯光年</span>
+        </div>
+        <main>
+            
+            <h3>1.background-position 方案</h3>
+            <p>它允许我们指定背景图像距离任意角的偏移量，只要我们在偏移量前面指定关键字。然而它在默认状态下背景图片紧贴左上角：
+            <img src="article-3-1.png" /></p>
+            <p>为什么背景图片的位置是边框内呢？答案是：默认情况下，background-position 是以padding-box 为准的，这样边框才不会遮盖背景图片。<img src="article-3-2.png" />当我们给它指定偏移量的时候，例如:</p>
+            <div class="html-1">
+                <pre>
+background:url(xxx.jpg ) no-repeat #C4D9E6;
+background-position: right 20px bottom 20px;
+                 </pre>
+            </div>
+            <p>背景图片将被指定到右下角，跟右边缘保持20px的偏移量，跟底边保持20px的偏移量。
+                    *如果只规定了一个关键词，那么第二个值将是"center"。<img src="article-3-3.png" />然而，在不支持background-position属性的浏览器中，背景图片会回到默认位置。会干扰到文字的可读性。于是，需要提供一个回退方案，把 bottom right定位值写到background属性里面。</p>
+            <div class="html-1">
+                <pre>
+background:url(xxx.jpg ) no-repeat bottom right #C4D9E6;
+background-position: right 20px bottom 20px;
+                </pre>
+            </div>
+            <h3>2.background-origin 方案</h3>
+            <p>它规定 background-position 属性相对于什么位置来定位。语法：background-origin: padding-box|border-box|content-box;</p>
+            <div class="html-1">
+                <pre>
+padding:10px;
+background:url(xxx.jpg ) no-repeat bottom right #C4D9E6;
+background-origin: content-box;
+                </pre>
+            </div>
+            <p>默认情况下，背景图片通过 padding-box 定位，如果把它的值改成content-box，那么图片距离边角的偏移量就跟内边距一样了。<img src="article-3-4.png"/></p>
+            <h3>3.calc() 方案</h3>
+            <p>语法：calc() = calc(四则运算) </p>
+            <div class="html-1">
+                <pre>
+用于动态计算长度值。
+任何长度值都可以使用calc()函数进行计算；
+calc()函数支持 "+", "-", "*", "/" 运算；
+calc()函数使用标准的数学运算优先级规则；
+                </pre>
+            </div>
+            <p>在第一种方案中，我们想要把背景图片定位到距离底边20px, 且距离右边20px的位置。如果我们仍然以左上角偏移的思路来思考，起始就是希望它有一个 100%-20px 的水平偏移，以及100%-20px 的垂直偏移。所以我们可以把 calc() 函数在background-position 属性中使用：</p>
+            <div class="html-1">
+                <pre>
+background:url(xxx.jpg ) no-repeat #C4D9E6;
+background-position: calc(100% - 20px) calc(100% - 20px) ;
+                </pre>
+            </div>
+            <p>*需要注意的是，运算符 "-" 前后都需要保留一个空格，例如：width: calc(100% - 10px)；<img src="article-3-5.png"/>
+                参考书籍：Lea Verou《CSS揭秘》</p>
+        </main>
+    </div>
+</body>
+
+</html>
