@@ -220,54 +220,47 @@ p {
             <span class="name">2017年06月17日 &nbsp; by 巴斯光年</span>
         </div>
         <main>
-            
-            <h3>1.background-position 方案</h3>
-            <p>它允许我们指定背景图像距离任意角的偏移量，只要我们在偏移量前面指定关键字。然而它在默认状态下背景图片紧贴左上角：
-            <img src="article-3-1.png" /></p>
-            <p>为什么背景图片的位置是边框内呢？答案是：默认情况下，background-position 是以padding-box 为准的，这样边框才不会遮盖背景图片。<img src="article-3-2.png" />当我们给它指定偏移量的时候，例如:</p>
+            <p>如果不给一个元素具体的height，它就会自动适应其内容的高度。假如我们希望width也有类似的行为，该怎么办呢？</p>
             <div class="html-1">
                 <pre>
-background:url(xxx.jpg ) no-repeat #C4D9E6;
-background-position: right 20px bottom 20px;
+&lt;p>some text [···]&lt;/p&gt;
+&lt;figure&gt;
+ &lt;img src="cat.jpg"&gt;
+ &lt;figcaption&gt;
+  background-color background-position background-size
+ &lt;/figcaption&gt;
+ &lt;/figure&gt;
+&lt;p>some text [···]&lt;/p&gt;
                  </pre>
             </div>
-            <p>背景图片将被指定到右下角，跟右边缘保持20px的偏移量，跟底边保持20px的偏移量。
-                    *如果只规定了一个关键词，那么第二个值将是"center"。<img src="article-3-3.png" />然而，在不支持background-position属性的浏览器中，背景图片会回到默认位置。会干扰到文字的可读性。于是，需要提供一个回退方案，把 bottom right定位值写到background属性里面。</p>
+            <p>给figure 加了一道边框，在默认情况下，看起来就是下图这样的：
+                    <img src="article-4-1.gif" />但是我们想要的效果是这个 figure 元素能跟它所包含的图片一样宽，而且是水平居中的。
+                    那就要用到width 和height 的 min-content属性了。这个关键字将解析为这个容器内部最大的不可断行元素的宽度（即最宽的单词、图片或具有固定宽度的盒元素）</p>
             <div class="html-1">
                 <pre>
-background:url(xxx.jpg ) no-repeat bottom right #C4D9E6;
-background-position: right 20px bottom 20px;
+figure {
+border:1px solid #ace;
+width: -webkit-min-content;   /*考虑到兼容性，加前缀*/
+width: -moz-min-content;
+width: min-content;
+margin:auto;
+}
                 </pre>
             </div>
-            <h3>2.background-origin 方案</h3>
-            <p>它规定 background-position 属性相对于什么位置来定位。语法：background-origin: padding-box|border-box|content-box;</p>
+            <p><img src="article-4-2.gif" />为了给旧版本浏览器提供一个平稳的回退样式，我们需要在使用这个技巧的同时，提供一个固定的maax-width 值：</p>
             <div class="html-1">
                 <pre>
-padding:10px;
-background:url(xxx.jpg ) no-repeat bottom right #C4D9E6;
-background-origin: content-box;
+figure {
+max-width:300px;
+max-width:min-content;
+margin:auto;
+}
+figure > img{
+max-width:inherit;}
                 </pre>
             </div>
-            <p>默认情况下，背景图片通过 padding-box 定位，如果把它的值改成content-box，那么图片距离边角的偏移量就跟内边距一样了。<img src="article-3-4.png"/></p>
-            <h3>3.calc() 方案</h3>
-            <p>语法：calc() = calc(四则运算) </p>
-            <div class="html-1">
-                <pre>
-用于动态计算长度值。
-任何长度值都可以使用calc()函数进行计算；
-calc()函数支持 "+", "-", "*", "/" 运算；
-calc()函数使用标准的数学运算优先级规则；
-                </pre>
-            </div>
-            <p>在第一种方案中，我们想要把背景图片定位到距离底边20px, 且距离右边20px的位置。如果我们仍然以左上角偏移的思路来思考，起始就是希望它有一个 100%-20px 的水平偏移，以及100%-20px 的垂直偏移。所以我们可以把 calc() 函数在background-position 属性中使用：</p>
-            <div class="html-1">
-                <pre>
-background:url(xxx.jpg ) no-repeat #C4D9E6;
-background-position: calc(100% - 20px) calc(100% - 20px) ;
-                </pre>
-            </div>
-            <p>*需要注意的是，运算符 "-" 前后都需要保留一个空格，例如：width: calc(100% - 10px)；<img src="article-3-5.png"/>
-                参考书籍：Lea Verou《CSS揭秘》</p>
+            <p>对于现代浏览器来说，后一条 max-width 声明会覆盖前一条。如果figure 的尺寸是由内部因素决定时，第二条规则中的 max-width：inherit；就不会生效了。
+               <br>参考书籍：Lea Verou《CSS揭秘》</p>   
         </main>
     </div>
 </body>
