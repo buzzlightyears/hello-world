@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+img {
+     display: block;    
+}
+body {
+    background: #F1F9FB;
+}
+p {
+    text-align: justify;
+    line-height: 26px;
+    word-break:break-all; /*支持IE，chrome，FF不支持*/
+    word-wrap:break-word;/*支持IE，chrome，FF*/
+}
+.title {
+    margin-bottom: 40px;
+}
+
+  /* --------------------------------------------------------------菜单栏-*/
+  header {
+        height: 4.5em;
+        background: #15191A;
+        position: relative;
+    }
+    header ul {
+        position: absolute;
+        right: 20%;
+    }
+    header ul li {    
+        line-height: 4.5em;
+        list-style: none;
+        color: #fff;
+        display: inline-block;
+        margin-left: 40px; 
+        position: relative;
+    }
+    header ul li:after {
+        position: absolute;
+        left: -50%;
+        bottom: 20px;
+        content: "";
+        width: 200%;
+        height: 1px;
+        background: #fff;
+        transform: scale(0);
+        -webkit-transition: all 1s;
+        transition: all 1s;
+    }
+    header ul li:hover:after {    
+        transform: scale(1)
+    }
+    
+/* ----------------------------------------------定位菜单图标-*/
+
+    .lines {
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        margin-top: -11px;
+        cursor: pointer;
+
+    }
+/* ---------------------------------统一设置三条细线的样式和动画-*/
+
+    .lines span{
+        display: block;
+        width: 25px;
+        height:2px;
+        background: #fff;
+        margin: 4px 0;
+        
+    }
+    .button span{
+        -webkit-animation: all 1s ease-in-out 1;
+        animation: all 1s ease-in-out 1;
+    }
+/* ------------------------------------调用每一条细线的动画名称-*/
+
+    .button:hover span:nth-child(1) {
+        -webkit-animation-name: top;
+        animation-name: top;
+    }
+    .button:hover span:nth-child(2) {
+        -webkit-animation-name: mid;
+        animation-name: mid;
+    }
+    .button:hover span:nth-child(3) {
+        -webkit-animation-name: bot;
+        animation-name: bot;
+    }
+/* ------------------------------------------------设置关键帧-*/
+
+    @-webkit-keyframes top {             /*------------上移--*/
+        0% { transform: translate(0,0)}
+        50% { transform: translate(0,-10px)}
+        60% { transform: translate(0,-10px)}
+        100% { transform: translate(0,0)}
+    }
+    @keyframes top{
+        0% { transform: translate(0,0)}
+        50% { transform: translate(0,-10px)}
+        60% { transform: translate(0,-10px)}
+        100% { transform: translate(0,0)}
+    }
+
+    @-webkit-keyframes mid {               /*-----------旋转--*/
+        0% { transform: rotate(0deg)}
+        100% { transform: rotate(180deg)}
+    }
+    @keyframes mid {                               
+        0% { transform: rotate(0deg)}
+        100% { transform: rotate(180deg)}
+    }
+
+    @-webkit-keyframes bot {           /*-----------下移--*/
+        0% { transform: translate(0,0)}
+        50% { transform: translate(0,10px)}
+        60% { transform: translate(0,10px)}
+        100% { transform: translate(0,0)}
+    }
+    @keyframes bot {                
+        0% { transform: translate(0,0)}
+        50% { transform: translate(0,10px)}
+        60% { transform: translate(0,10px)}
+        100% { transform: translate(0,0)}
+    }                 
+/*------------------------------页面中实现效果--*/
+
+        .all {
+            width: 60%;
+            height: auto;
+            margin: 2em auto;
+            background: #fff;
+            padding: 40px;
+            box-sizing: border-box;
+        }
+
+        main img {
+            width: 100%;
+            height: auto;
+            margin-top: 2em;
+            margin-bottom: 2em;
+        }
+
+        .title span {
+            color: #C0C1C2;
+            font-size: .8em;
+        }
+
+        main .html-1 {
+            width: auto;
+            background: #F6F6F6;
+            padding: 1em 1.5em;
+            margin: 1em 0;
+            
+        }
+        main .html-1 pre {
+            width: auto;
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word
+        }
+@media only screen and (min-width:1001px) {
+    .all {
+    width: 60%;
+   }
+}
+@media only screen and (max-width: 1000px) and (min-width: 600px) {
+    .all {
+    width: 60%;
+   }
+}
+@media only screen and (max-width:600px) {
+    .all {
+    width: 85%;
+   }
+   header ul {
+        right: 7.5%;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="../index.html">
+            <div class="button">
+                <div class="lines">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </a>
+        <ul>
+            <a href="css-blog.html">
+                <li>文章</li>
+            </a>
+            <a href="../exercise/css-exercise.html">
+                <li>练习</li>
+            </a>
+        </ul>
+    </header>
+    <div class="all">
+        <div class="title">
+            <h2>【width：min-content】自适应内部元素</h2>
+            <span class="name">2017年06月17日 &nbsp; by 巴斯光年</span>
+        </div>
+        <main>
+            <p>如果不给一个元素具体的height，它就会自动适应其内容的高度。假如我们希望width也有类似的行为，该怎么办呢？</p>
+            <div class="html-1">
+                <pre>
+&lt;p>some text [···]&lt;/p&gt;
+&lt;figure&gt;
+ &lt;img src="cat.jpg"&gt;
+ &lt;figcaption&gt;
+  background-color background-position background-size
+ &lt;/figcaption&gt;
+ &lt;/figure&gt;
+&lt;p>some text [···]&lt;/p&gt;
+                 </pre>
+            </div>
+            <p>给figure 加了一道边框，在默认情况下，看起来就是下图这样的：
+                    <img src="article-4-1.gif" />但是我们想要的效果是这个 figure 元素能跟它所包含的图片一样宽，而且是水平居中的。
+                    那就要用到width 和height 的 min-content属性了。这个关键字将解析为这个容器内部最大的不可断行元素的宽度（即最宽的单词、图片或具有固定宽度的盒元素）</p>
+            <div class="html-1">
+                <pre>
+figure {
+border:1px solid #ace;
+width: -webkit-min-content;   /*考虑到兼容性，加前缀*/
+width: -moz-min-content;
+width: min-content;
+margin:auto;
+}
+                </pre>
+            </div>
+            <p><img src="article-4-2.gif" />为了给旧版本浏览器提供一个平稳的回退样式，我们需要在使用这个技巧的同时，提供一个固定的maax-width 值：</p>
+            <div class="html-1">
+                <pre>
+figure {
+max-width:300px;
+max-width:min-content;
+margin:auto;
+}
+figure > img{
+max-width:inherit;}
+                </pre>
+            </div>
+            <p>对于现代浏览器来说，后一条 max-width 声明会覆盖前一条。如果figure 的尺寸是由内部因素决定时，第二条规则中的 max-width：inherit；就不会生效了。
+               <br>参考书籍：Lea Verou《CSS揭秘》</p>   
+        </main>
+    </div>
+</body>
+
+</html>
